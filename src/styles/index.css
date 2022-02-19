@@ -103,7 +103,14 @@
 
 .list_nav a {
   font-size: 36px;
-  font-weight: 700;
+  font-weight: 900;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+  color: dimgray;
+}
+
+.list_nav a:hover {
+  color: coral;
 }
 
 .sec_intro {
@@ -270,8 +277,127 @@
 }
 
 .sec_skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
   height: 100vh;
   overflow: hidden;
+}
+
+.sec_skills .txt_title {
+  display: block;
+  font-size: 50px;
+  margin-bottom: 10px;
+  opacity: 0;
+  -webkit-animation: career 2s forwards;
+          animation: career 2s forwards;
+}
+
+.sec_skills .list_level {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 50px;
+  opacity: 0;
+  -webkit-animation: career 2s forwards .2s;
+          animation: career 2s forwards .2s;
+}
+
+.sec_skills .list_level .wrap_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 10px;
+}
+
+.sec_skills .list_level dt,
+.sec_skills .list_level dd {
+  color: dimgray;
+}
+
+.sec_skills .list_level dt {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.sec_skills .list_level dd {
+  font-size: 16px;
+  margin-left: 7px;
+}
+
+.sec_skills .list_skills .btn_level {
+  border: none;
+  border-bottom: 3px solid dimgray;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  font-size: 36px;
+  font-weight: 700;
+  color: darkgray;
+  background-color: white;
+  opacity: 0;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+  cursor: pointer;
+}
+
+.sec_skills .list_skills .btn_level:hover {
+  padding-right: 25px;
+  color: coral;
+}
+
+.sec_skills .list_skills .btn_level.on {
+  padding-right: 25px;
+  color: black;
+}
+
+.sec_skills .list_skills .btn_level5 {
+  -webkit-animation: career 1s forwards .4s;
+          animation: career 1s forwards .4s;
+}
+
+.sec_skills .list_skills .btn_level4 {
+  -webkit-animation: career 1s forwards .6s;
+          animation: career 1s forwards .6s;
+}
+
+.sec_skills .list_skills .btn_level3 {
+  -webkit-animation: career 1s forwards .8s;
+          animation: career 1s forwards .8s;
+}
+
+.sec_skills .list_skills .btn_level2 {
+  -webkit-animation: career 1s forwards 1s;
+          animation: career 1s forwards 1s;
+}
+
+.sec_skills .txt_skill {
+  display: none;
+  position: absolute;
+  top: 265px;
+  left: 200px;
+  font-size: 250px;
+  opacity: 0;
+  -webkit-animation: career 2s forwards 1s;
+          animation: career 2s forwards 1s;
+}
+
+.sec_skills .txt_skill.on {
+  display: block;
+}
+
+.sec_skills .txt_smallLetter {
+  font-size: 200px;
+}
+
+.sec_skills .txt_react {
+  font-size: 350px;
 }
 /*# sourceMappingURL=index.css.map */

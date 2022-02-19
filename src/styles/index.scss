@@ -44,7 +44,12 @@
   padding: 20px 0;
   a {
     font-size: 36px;
-    font-weight: 700;
+    font-weight: 900;
+    transition: all .25s;
+    color: dimgray;
+  }
+  a:hover {
+    color: coral;
   }
 }
 
@@ -179,7 +184,97 @@
 
 // 기술
 .sec_skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: relative;
   height: 100vh;
   overflow: hidden;
+  .txt_title {
+    display: block;
+    font-size: 50px;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: career 2s forwards;
+  }
+  .list_level {
+    display: flex;
+    margin-bottom: 50px;
+    opacity: 0;
+    animation: career 2s forwards .2s;
+    .wrap_content {
+      display: flex;
+      margin-right: 10px;
+    }
+    dt,
+    dd {
+      color: dimgray;
+    }
+    dt {
+      font-size: 18px;
+      font-weight: 700;
+    }
+    dd {
+      font-size: 16px;
+      margin-left: 7px;
+    }
+  }
+  .list_skills {
+    .btn_level {
+      border: none;
+      border-bottom: 3px solid dimgray;
+      margin-bottom: 30px;
+      padding-bottom: 10px;
+      font-size: 36px;
+      font-weight: 700;
+      color: darkgray;
+      background-color: white;
+      opacity: 0;
+      transition: all .25s;
+      cursor: pointer;
+    }
+    .btn_level:hover {
+      padding-right: 25px;
+      color: coral;
+    }
+    .btn_level.on {
+      padding-right: 25px;
+      color: black;
+    }
+    .btn_level5 {
+      animation: career 1s forwards .4s;
+    }
+    .btn_level4 {
+      animation: career 1s forwards .6s;
+    }
+    .btn_level3 {
+      animation: career 1s forwards .8s;
+    }
+    .btn_level2 {
+      animation: career 1s forwards 1s;
+    }
+  }
+  .txt_skill {
+    display: none;
+    position: absolute;
+    top: 265px;
+    left: 200px;
+    font-size: 250px;
+    opacity: 0;
+    animation: career 2s forwards 1s;
+  }
+  .txt_skill.on {
+    display: block;
+  }
+  .txt_smallLetter {
+    font-size: 200px;
+  }
+  .txt_react {
+    font-size: 350px;
+  }
+}
+
+// 작품
+.sec_portfolio {
+  
 }

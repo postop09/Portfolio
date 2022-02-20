@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +16,11 @@
   height: 1px;
   margin: -1px;
   overflow: hidden;
+}
+
+@font-face {
+  font-family: appleGothic;
+  src: url(../font/AppleSDGothicNeoB.ttf) format("truetype");
 }
 
 @-webkit-keyframes backgroundDot {
@@ -81,6 +87,10 @@
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
+}
+
+* {
+  font-family: 'appleGothic';
 }
 
 .index_header {
@@ -201,7 +211,9 @@
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
+  max-width: 1440px;
   height: 100vh;
+  margin: auto;
   overflow: hidden;
 }
 
@@ -291,7 +303,9 @@
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
+  max-width: 1440px;
   height: 100vh;
+  margin: auto;
   overflow: hidden;
 }
 
@@ -367,18 +381,18 @@
 }
 
 .sec_skills .list_skills .btn_level4 {
+  -webkit-animation: career 1s forwards .5s;
+          animation: career 1s forwards .5s;
+}
+
+.sec_skills .list_skills .btn_level3 {
   -webkit-animation: career 1s forwards .6s;
           animation: career 1s forwards .6s;
 }
 
-.sec_skills .list_skills .btn_level3 {
-  -webkit-animation: career 1s forwards .8s;
-          animation: career 1s forwards .8s;
-}
-
 .sec_skills .list_skills .btn_level2 {
-  -webkit-animation: career 1s forwards 1s;
-          animation: career 1s forwards 1s;
+  -webkit-animation: career 1s forwards .7s;
+          animation: career 1s forwards .7s;
 }
 
 .sec_skills .txt_skill {
@@ -388,8 +402,9 @@
   left: 200px;
   font-size: 250px;
   opacity: 0;
-  -webkit-animation: career 2s forwards 1s;
-          animation: career 2s forwards 1s;
+  -webkit-animation: career 2s forwards;
+          animation: career 2s forwards;
+  cursor: default;
 }
 
 .sec_skills .txt_skill.on {
@@ -401,6 +416,7 @@
 }
 
 .sec_skills .txt_react {
+  margin-top: 55px;
   font-size: 350px;
 }
 
@@ -409,7 +425,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 1440px;
   height: 100vh;
+  margin: auto;
   overflow: hidden;
 }
 
@@ -467,18 +485,18 @@
 }
 
 .sec_works .wrap_btnWorks .list_works .btn_workPortfolio {
+  -webkit-animation: career 1s forwards .5s;
+          animation: career 1s forwards .5s;
+}
+
+.sec_works .wrap_btnWorks .list_works .btn_workOpen {
   -webkit-animation: career 1s forwards .6s;
           animation: career 1s forwards .6s;
 }
 
-.sec_works .wrap_btnWorks .list_works .btn_workOpen {
-  -webkit-animation: career 1s forwards .8s;
-          animation: career 1s forwards .8s;
-}
-
 .sec_works .wrap_btnWorks .list_works .btn_workHour {
-  -webkit-animation: career 1s forwards 1s;
-          animation: career 1s forwards 1s;
+  -webkit-animation: career 1s forwards .7s;
+          animation: career 1s forwards .7s;
 }
 
 .sec_works .artic_work {
@@ -486,12 +504,37 @@
 }
 
 .sec_works .artic_work .img_work {
-  width: 400px;
-  height: 500px;
-  margin-right: 30px;
+  position: relative;
+  border: 2px solid dimgray;
+  width: 500px;
+  height: 700px;
+  opacity: 0;
+  -webkit-animation: career 2s forwards .1s;
+          animation: career 2s forwards .1s;
 }
 
-.sec_works .artic_work .list_workTeam {
+.sec_works .artic_work .txt_link {
+  position: relative;
+}
+
+.sec_works .artic_work .txt_link::after {
+  content: '위 이미지를 누르면 해당 페이지로 이동합니다.';
+  display: block;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  opacity: 0;
+  -webkit-animation: opacity 2s forwards .1s;
+          animation: opacity 2s forwards .1s;
+  cursor: default;
+}
+
+.sec_works .artic_work .list_workDetail {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -503,20 +546,51 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 20px;
+  margin-left: 30px;
 }
 
-.sec_works .artic_work .list_workTeam dt {
-  font-size: 24px;
+.sec_works .artic_work .list_workDetail .txt_git {
+  border-bottom: 2px solid black;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.sec_works .artic_work .list_workDetail .txt_git:hover {
+  border-bottom: 2px solid coral;
+  color: coral;
+}
+
+.sec_works .artic_work .list_workDetail dt {
+  font-size: 30px;
   font-weight: 700;
 }
 
-.sec_works .artic_work .list_workTeam li {
-  font-size: 18px;
+.sec_works .artic_work .list_workDetail li {
+  font-size: 20px;
 }
 
-.sec_works .artic_work .list_workTeam .list_contribute small {
+.sec_works .artic_work .list_workDetail .list_contribute small {
   display: block;
   text-indent: 15px;
+}
+
+.sec_works .artic_work .list_workDetail .wrap_content {
+  opacity: 0;
+}
+
+.sec_works .artic_work .list_workDetail .wrap_summary {
+  -webkit-animation: career 1s forwards .5s;
+          animation: career 1s forwards .5s;
+}
+
+.sec_works .artic_work .list_workDetail .wrap_setting {
+  -webkit-animation: career 1s forwards .7s;
+          animation: career 1s forwards .7s;
+}
+
+.sec_works .artic_work .list_workDetail .wrap_core {
+  -webkit-animation: career 1s forwards .9s;
+          animation: career 1s forwards .9s;
 }
 
 .sec_works .artic_work.on {

@@ -113,7 +113,14 @@
   color: coral;
 }
 
+.sec_theme.on {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .sec_intro {
+  display: none;
   position: relative;
   height: 100vh;
   overflow: hidden;
@@ -185,9 +192,7 @@
 }
 
 .sec_career {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -277,9 +282,7 @@
 }
 
 .sec_skills {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -399,5 +402,126 @@
 
 .sec_skills .txt_react {
   font-size: 350px;
+}
+
+.sec_works {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sec_works .wrap_btnWorks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  margin-right: 50px;
+}
+
+.sec_works .wrap_btnWorks .txt_title {
+  display: block;
+  font-size: 50px;
+  margin-bottom: 50px;
+  opacity: 0;
+  -webkit-animation: career 2s forwards;
+          animation: career 2s forwards;
+}
+
+.sec_works .wrap_btnWorks .list_works .btn_work {
+  border: none;
+  border-bottom: 3px solid dimgray;
+  width: 240px;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  text-align: left;
+  font-size: 36px;
+  font-weight: 700;
+  color: darkgray;
+  background-color: white;
+  opacity: 0;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+  cursor: pointer;
+}
+
+.sec_works .wrap_btnWorks .list_works .btn_work:hover {
+  width: 265px;
+  color: coral;
+}
+
+.sec_works .wrap_btnWorks .list_works .btn_work.on {
+  width: 265px;
+  color: black;
+}
+
+.sec_works .wrap_btnWorks .list_works .btn_workTeam {
+  -webkit-animation: career 1s forwards .4s;
+          animation: career 1s forwards .4s;
+}
+
+.sec_works .wrap_btnWorks .list_works .btn_workPortfolio {
+  -webkit-animation: career 1s forwards .6s;
+          animation: career 1s forwards .6s;
+}
+
+.sec_works .wrap_btnWorks .list_works .btn_workOpen {
+  -webkit-animation: career 1s forwards .8s;
+          animation: career 1s forwards .8s;
+}
+
+.sec_works .wrap_btnWorks .list_works .btn_workHour {
+  -webkit-animation: career 1s forwards 1s;
+          animation: career 1s forwards 1s;
+}
+
+.sec_works .artic_work {
+  display: none;
+}
+
+.sec_works .artic_work .img_work {
+  width: 400px;
+  height: 500px;
+  margin-right: 30px;
+}
+
+.sec_works .artic_work .list_workTeam {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 20px;
+}
+
+.sec_works .artic_work .list_workTeam dt {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.sec_works .artic_work .list_workTeam li {
+  font-size: 18px;
+}
+
+.sec_works .artic_work .list_workTeam .list_contribute small {
+  display: block;
+  text-indent: 15px;
+}
+
+.sec_works .artic_work.on {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=index.css.map */

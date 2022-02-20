@@ -12,17 +12,17 @@
     <h1 class="txt_hide">도전하며 즐기는 사람</h1>
     <nav>
       <ul class="list_nav">
-        <li>
+        <li class="btn_intro">
           <a href="#">
             소개
           </a>
         </li>
-        <li>
+        <li class="btn_skills">
           <a href="#">
             기술
           </a>
         </li>
-        <li>
+        <li class="btn_works">
           <a href="#">
             작품
           </a>
@@ -32,8 +32,8 @@
   </header>
   <main class="index_main">
     <h2 class="txt_hide">조윤식을 소개합니다.</h2>
-    <!-- 수채화/한글 느낌 -->
-    <section class="sec_intro">
+    <!-- 표지 -->
+    <section class="sec_theme sec_intro on">
       <h3 class="txt_hide">표지</h3>
       <p class="txt_backName">
         <span>조</span>
@@ -45,7 +45,8 @@
       <div class="dot3"></div>
       <div class="dot4"></div>
     </section>
-    <section class="sec_career">
+    <!-- 소개 -->
+    <section class="sec_theme sec_career">
       <h3 class="txt_hide">소개글</h3>
       <strong class="txt_title">경력 및 이력</strong>
       <article class="artic_career artic_front">
@@ -81,7 +82,8 @@
       <div class="dot1"></div>
       <div class="dot2"></div>
     </section>
-    <section class="sec_skills">
+    <!-- 기술 -->
+    <section class="sec_theme sec_skills">
       <h3 class="txt_hide">기술</h3>
       <strong class="txt_title">수행 능력 및 사용 기술</strong>
       <dl class="list_level">
@@ -117,12 +119,232 @@
       <strong class="txt_skill">Git & GitHub</strong>
       <strong class="txt_skill txt_react">React</strong>
     </section>
-    <section class="sec_portfolio">
+    <!-- 작품 -->
+    <section class="sec_theme sec_works">
       <h3 class="txt_hide">작품</h3>
+      <div class="wrap_btnWorks">
+        <strong class="txt_title">포트폴리오</strong>
+        <ul class="list_works">
+          <li class="item_work"><button type="button" class="btn_work btn_workTeam on">감귤마켓</button></li>
+          <li class="item_work"><button type="button" class="btn_work btn_workPortfolio">포트폴리오 연습</button></li>
+          <li class="item_work"><button type="button" class="btn_work btn_workOpen">오픈마켓</button></li>
+          <li class="item_work"><button type="button" class="btn_work btn_workHour">1만 시간의 법칙</button></li>
+        </ul>
+      </div>
+      <!-- 감귤마켓 -->
+      <article class="artic_work artic_workTeam on">
+        <h4 class="txt_hide">감귤마켓</h4>
+        <a href=""><img src="" alt="" class="img_work"></a>
+        <dl class="list_workTeam">
+          <div class="wrap_content">
+            <dt>작품 개요</dt>
+            <dd>
+              <ul>
+                <li>1. 멋쟁이사자처럼 프론트엔드 스쿨 1기 팀 프로젝트</li>
+                <li>2. 모바일 페이지 제작</li>
+                <li>3. 다양한 상품 판매, 구매, 교환, 채팅 등을 통해 소통 및 사용자 간 거래를 할 수 있다.</li>
+              </ul>
+            </dd>
+          </div>
+          <div class="wrap_content">
+            <dt>개발 환경</dt>
+            <dd>
+              <ul>
+                <li>1. 5인 팀 프로젝트</li>
+                <li>2. 주 1회 팀 회의 및 디스코드/카카오톡을 통한 지속적인 의사소통과 피드백</li>
+                <li>3. Figma 활용</li>
+                <li>4. HTML/CSS/JavaScript/Git/GitHub 사용</li>
+                <li>5. Server API 활용</li>
+              </ul>
+            </dd>
+          </div>
+          <div class="wrap_content">
+            <dt>주요 사항</dt>
+            <dd>
+              <ul class="list_contribute">
+                <li>
+                  <strong>1. 페이지 제작</strong>
+                  <small>가. 게시물 표시</small>
+                </li>
+                <li>
+                  <strong>2. 페이지 제작</strong>
+                  <small>가. 게시물 표시</small>
+                </li>
+                <li>
+                  <strong>3. 페이지 제작</strong>
+                  <small>가. 게시물 표시</small>
+                </li>
+                <li>
+                  <strong>4. 페이지 제작</strong>
+                  <small>가. 게시물 표시</small>
+                </li>
+                <li>
+                  <strong>5. 페이지 제작</strong>
+                  <small>가. 게시물 표시</small>
+                </li>
+              </ul>
+            </dd>
+          </div>
+        </dl>
+      </article>
+      <!-- 포트폴리오 연습 -->
+      <article class="artic_work artic_workPortfolio">
+        <h4 class="txt_hide">포트폴리오 연습</h4>
+        <a href=""><img src="" alt="" class="img_work"></a>
+        <dl class="list_workTeam">
+          <div class="wrap_content">
+            <dt>작품 개요</dt>
+            <dd>
+              <ul>
+                <li>모바일 우선 반응형 페이지 제작</li>
+                <li>개인 이력, 나를 정리하고 재미있게 소개하고 싶은 포트폴리오 연습 페이지</li>
+              </ul>
+            </dd>
+          </div>
+          <div class="wrap_content">
+            <dt>개발 환경</dt>
+            <dd>
+              <ul>
+                <li>1. 개인 개발</li>
+                <li>2. Mindmap 활용</li>
+                <li>3. HTML/CSS/JavaScript/Git/GitHub 사용</li>
+              </ul>
+            </dd>
+          </div>
+          <div class="wrap_content">
+            <dt>주요 사항</dt>
+            <dd>
+              <ul class="list_contribute">
+                <li>
+                  <strong>1. 메인 페이지</strong>
+                  <small>가. 다크모드</small>
+                  <small>나. 간략한 소개 및 이동링크 제시</small>
+                  <small>다. 카드 형태로 테마를 구분(카카오웹툰 참고)</small>
+                </li>
+                <li>
+                  <strong>2. 소개 페이지</strong>
+                  <small>가. 댓글 작성</small>
+                  <small>나. SNS 형태로 나의 가치관, 자격, 강점 등 소개</small>
+                </li>
+                <li>
+                  <strong>3. 페이지 제작</strong>
+                  <small>가. 게시물 표시</small>
+                </li>
+                <li>
+                  <strong>4. 페이지 제작</strong>
+                  <small>가. 게시물 표시</small>
+                </li>
+              </ul>
+            </dd>
+          </div>
+        </dl>
+      </article>
+      <!-- 오픈 마켓 -->
+      <article class="artic_work artic_workOpen">
+        <h4 class="txt_hide">오픈마켓</h4>
+        <a href=""><img src="" alt="" class="img_work"></a>
+        <dl class="list_workTeam">
+          <div class="wrap_content">
+            <dt>작품 개요</dt>
+            <dd>
+              <ul>
+                <li>1. 멋쟁이사자처럼 프론트엔드 스쿨 1기 개인 프로젝트</li>
+                <li>2. PC 페이지 제작</li>
+                <li>3. 쇼핑몰 페이지 제작이다.</li>
+              </ul>
+            </dd>
+          </div>
+          <div class="wrap_content">
+            <dt>개발 환경</dt>
+            <dd>
+              <ul>
+                <li>1. 개인 개발</li>
+                <li>2. Figma 활용</li>
+                <li>3. HTML/CSS/JavaScript/Git/GitHub 사용</li>
+                <li>4. Server API 활용</li>
+              </ul>
+            </dd>
+          </div>
+          <div class="wrap_content">
+            <dt>주요 사항</dt>
+            <dd>
+              <ul class="list_contribute">
+                <li>
+                  <strong>1. 페이지 제작</strong>
+                  <small>가. 게시물 표시</small>
+                </li>
+                <li>
+                  <strong>2. 페이지 제작</strong>
+                  <small>가. 게시물 표시</small>
+                </li>
+                <li>
+                  <strong>3. 페이지 제작</strong>
+                  <small>가. 게시물 표시</small>
+                </li>
+                <li>
+                  <strong>4. 페이지 제작</strong>
+                  <small>가. 게시물 표시</small>
+                </li>
+                <li>
+                  <strong>5. 페이지 제작</strong>
+                  <small>가. 게시물 표시</small>
+                </li>
+              </ul>
+            </dd>
+          </div>
+        </dl>
+      </article>
+      <!-- 1만 시간의 법칙 -->
+      <article class="artic_work artic_workHour">
+        <h4 class="txt_hide">1만 시간의 법칙</h4>
+        <a href=""><img src="" alt="" class="img_work"></a>
+        <dl class="list_workTeam">
+          <div class="wrap_content">
+            <dt>작품 개요</dt>
+            <dd>
+              <ul>
+                <li>1. 멋쟁이사자처럼 프론트엔드 스쿨 1기 개인 프로젝트</li>
+                <li>2. 반응형 페이지 제작</li>
+                <li>3. 전문가가 되기 위해서는 1만 시간이 필요하다는 법칙이다. 사용자들의 목표 달성을 위해 필요한 시간을 알려주고, 응원해준다.</li>
+              </ul>
+            </dd>
+          </div>
+          <div class="wrap_content">
+            <dt>개발 환경</dt>
+            <dd>
+              <ul>
+                <li>1. 개인 개발</li>
+                <li>2. 멘토님에게 피드백, 코드리뷰 요청</li>
+                <li>3. Figma 활용</li>
+                <li>4. HTML/CSS/JavaScript 사용</li>
+              </ul>
+            </dd>
+          </div>
+          <div class="wrap_content">
+            <dt>주요 사항</dt>
+            <dd>
+              <ul class="list_contribute">
+                <li>
+                  <strong>1. 모바일 우선 페이지 제작</strong>
+                  <small>가. 반응형 페이지</small>
+                </li>
+                <li>
+                  <strong>2. 모달창 출력</strong>
+                  <small>가. 응원의 메세지 전달</small>
+                </li>
+                <li>
+                  <strong>3. 목표 및 필요 시간 계산/출력</strong>
+                </li>
+              </ul>
+            </dd>
+          </div>
+        </dl>
+      </article>
     </section>
   </main>
   <footer class="index_footer">
 
   </footer>
+  <script src="../JavaScript/index.js"></script>
 </body>
 </html>

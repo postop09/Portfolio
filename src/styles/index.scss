@@ -37,6 +37,20 @@
 * {
   font-family: 'appleGothic';
 }
+.sec_linkIntro {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  right: 0;
+  padding: 10px 0;
+  font-size: 25px;
+  font-weight: 700;
+  text-align: center;
+  background-color: coral;
+  &:focus {
+    top: 0;
+  }
+}
 .index_header {
   position: fixed;
   top: 0;
@@ -167,6 +181,9 @@
     dd {
       margin-left: 7px;
     }
+    .txt_detail {
+      color: dimgray;
+    }
   }
   .artic_front {
     animation: career 2s forwards 1.3s;
@@ -292,10 +309,6 @@
   .txt_smallLetter {
     font-size: 200px;
   }
-  .txt_react {
-    line-height: 380px;
-    font-size: 350px;
-  }
 }
 
 // 작품
@@ -356,6 +369,9 @@
       }
     }
   }
+  .artic_work.on {
+    display: flex;
+  }
   .artic_work {
     display: none;
     .img_work {
@@ -380,6 +396,9 @@
       opacity: 0;
       animation: opacity 2s forwards .1s;
       cursor: default;
+    }
+    .txt_block {
+      color: darkred;
     }
     .list_workDetail {
       display: flex;
@@ -421,8 +440,5 @@
         animation: career 1s forwards .9s;
       }
     }
-  }
-  .artic_work.on {
-    display: flex;
   }
 }

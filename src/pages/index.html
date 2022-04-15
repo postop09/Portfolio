@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../styles/index.css">
 </head>
 <body>
+  <a href="#sec_intro" class="sec_linkIntro">메인 화면으로 이동</a>
   <header class="index_header">
     <h1 class="txt_hide">행복을 전하는 개발자</h1>
     <nav>
@@ -33,7 +34,7 @@
   <main class="index_main">
     <h2 class="txt_hide">조윤식을 소개합니다.</h2>
     <!-- 표지 -->
-    <section class="sec_theme sec_intro on">
+    <section id="sec_intro" class="sec_theme sec_intro on">
       <h3 class="txt_hide">표지</h3>
       <p class="txt_backName">
         <span>조</span>
@@ -60,9 +61,14 @@
             <dt>기간 :</dt>
             <dd>21.10.29 ~ 22.01.28</dd>
           </div>
-          <div class="wrap_content">
-            <dt>역할 :</dt>
-            <dd>클래스 부 리더, 스터디 그룹 운영</dd>
+          <div class="wrap_content wrap_detail">
+            <dt>세부 사항 : </dt>
+            <dd>
+              <ul class="list_detail">
+                <li class="txt_detail">클래스 부리더로서, 운영진-학생, 학생 간 소통 활성화에 기여</li>
+                <li class="txt_detail">스터디 그룹장으로서, 목표 설정과 동기를 부여하고 함께 학습하고 성장</li>
+              </ul>
+            </dd>
           </div>
         </dl>
       </article>
@@ -71,11 +77,19 @@
         <dl>
           <div class="wrap_content">
             <dt>내용 :</dt>
-            <dd>리액트 학습 부트캠프(React, Docker)</dd>
+            <dd>리액트 사용 능력 함양을 위한 부트캠프</dd>
           </div>
           <div class="wrap_content">
             <dt>기간 :</dt>
-            <dd>22.02.09 ~ 22.04.19(진행중)</dd>
+            <dd>22.02.09 ~ 22.04.19</dd>
+          </div>
+          <div class="wrap_content wrap_detail">
+            <dt>세부 사항 : </dt>
+            <dd>
+              <ul class="list_detail">
+                <li class="txt_detail">2주 단위의 미션 수행과 매주 그룹 단위의 팀 회고/소통</li>
+              </ul>
+            </dd>
           </div>
         </dl>
       </article>
@@ -113,13 +127,11 @@
           <li class="item_skill"><button type="button" class="btn_level btn_level5 on">Level 5</button></li>
           <li class="item_skill"><button type="button" class="btn_level btn_level4">Level 4</button></li>
           <li class="item_skill"><button type="button" class="btn_level btn_level3">Level 3</button></li>
-          <li class="item_skill"><button type="button" class="btn_level btn_level2">Level 2</button></li>
         </ul>
         <ul class="list_skills">
           <li class="txt_skill on">HTML & CSS</li>
           <li class="txt_skill">J<span class="txt_smallLetter">ava</span>S<span class="txt_smallLetter">cript</span> & SCSS</li>
-          <li class="txt_skill">Git & GitHub</li>
-          <li class="txt_skill txt_react">React</li>
+          <li class="txt_skill">Git & React</li>
         </ul>
       </div>
     </section>
@@ -138,16 +150,15 @@
       <!-- 감귤마켓 -->
       <article class="artic_work artic_workTeam on">
         <h4 class="txt_hide">감귤마켓</h4>
-        <a href="https://postop09.github.io/Gamsung/src/pages/index.html" target="_blank" class="txt_link"><img src="../images/img_mandarine.PNG" alt="감귤마켓 페이지로 이동" class="img_work"></a>
+        <a href="https://postop09.github.io/mandarine_market_ver2/src/pages/index.html" target="_blank" class="txt_link"><img src="../images/img_mandarine.PNG" alt="감귤마켓 페이지로 이동" class="img_work"></a>
         <dl class="list_workDetail">
           <div class="wrap_content wrap_summary">
             <dt>작품 개요</dt>
             <dd>
               <ul>
-                <li><a href="https://github.com/postop09/Gamsung" class="txt_git">1. GitHub로 이동하기</a></li>
-                <li>2. 멋쟁이사자처럼 프론트엔드 스쿨 1기 팀 프로젝트</li>
-                <li>3. 모바일 우선 페이지 제작</li>
-                <li>4. 다양한 상품 판매, 구매, 교환, 채팅 등을 통해 소통 및 사용자 간 거래를 할 수 있다.</li>
+                <li><a href="https://github.com/postop09/mandarine_market_ver2" class="txt_git">1. GitHub로 이동하기</a></li>
+                <li>2. 모바일 우선 페이지 제작</li>
+                <li>3. 다양한 상품 판매, 구매, 교환, 채팅 등을 통해 소통 및 사용자 간 거래를 할 수 있다.</li>
               </ul>
             </dd>
           </div>
@@ -156,10 +167,11 @@
             <dd>
               <ul>
                 <li>1. From 5인 팀 프로젝트 To 개인프로젝트로</li>
-                <li>2. 주 1회 팀 회의 및 디스코드/카카오톡을 통한 지속적인 의사소통과 피드백</li>
-                <li>3. Figma</li>
-                <li>4. HTML/CSS/JavaScript/Git/GitHub</li>
-                <li>5. Server API</li>
+                <li>2. 주 2회 팀 회의 및 디스코드/카카오톡을 통한 지속적인 의사소통과 피드백</li>
+                <li>3. HTML/CSS/JavaScript</li>
+                <li>4. Server API</li>
+                <li>5. Git/GitHub 이슈/프로젝트 칸반</li>
+                <li>6. Figma</li>
               </ul>
             </dd>
           </div>
@@ -168,22 +180,18 @@
             <dd>
               <ul class="list_contribute">
                 <li>
-                  <strong>1. 5개 페이지 제작</strong>
-                  <small>가. 게시글 상세보기, 게시글 작성, 채팅 목록, 채팅방, 오류 페이지</small>
+                  <strong>1. 모든 페이지 제작</strong>
                 </li>
                 <li>
                   <strong>2. 서버 API 연동</strong>
-                  <small>가. 게시글 상세보기 페이지</small>
-                  <small>나. 게시글 작성 페이지</small>
+                  <small>가. 로그인/회원가입</small>
+                  <small>나. 검색</small>
+                  <small>나. 게시글/댓글/프로필 CRUD</small>
                 </li>
                 <li>
-                  <strong>3. 게시글 클릭 시 상세 보기 페이지로 이동</strong>
-                  <small>가. 클릭한 게시물의 정보 출력</small>
-                  <small>나. 댓글 불러오기</small>
-                </li>
-                <li>
-                  <strong>4. 게시글 작성하고 업로드하기</strong>
-                  <small>가. 글 작성 및 이미지 업로드 기능</small>
+                  <strong>3. 작성자 구분 모달창</strong>
+                  <small>가. 본인의 글인 경우, 수정/삭제 모달창</small>
+                  <small>나. 타인의 글인 경우, 신고 모달창</small>
                 </li>
               </ul>
             </dd>
@@ -210,8 +218,8 @@
             <dd>
               <ul>
                 <li>1. 개인 개발</li>
-                <li>2. Mindmap 활용</li>
-                <li>3. HTML/CSS/JavaScript 사용</li>
+                <li>2. HTML/CSS/JavaScript</li>
+                <li>3. Mindmap</li>
               </ul>
             </dd>
           </div>
@@ -244,16 +252,16 @@
       <!-- 오픈 마켓 -->
       <article class="artic_work artic_workOpen">
         <h4 class="txt_hide">오픈마켓</h4>
-        <a href="" target="_blank" class="txt_link"><img src="../images/img_openmarket.png" alt="오픈마켓 페이지로 이동" class="img_work"></a>
+        <a href="https://github.com/postop09/openMarket" target="_blank" class="txt_link"><img src="../images/img_openmarket.png" alt="오픈마켓 페이지로 이동" class="img_work"></a>
         <dl class="list_workDetail">
           <div class="wrap_content wrap_summary">
             <dt>작품 개요</dt>
             <dd>
               <ul>
-                <li><a href="" class="txt_git">1. GitHub로 이동하기</a></li>
+                <li><a href="https://github.com/postop09/openMarket" class="txt_git">1. GitHub로 이동하기</a></li>
                 <li>2. 멋쟁이사자처럼 프론트엔드 스쿨 1기 개인 프로젝트</li>
                 <li>3. 쇼핑몰 페이지 제작</li>
-                <li>4. 제작중입니다...</li>
+                <li class="txt_block">4. From Vanilla JS to React 제작중...</li>
               </ul>
             </dd>
           </div>
@@ -262,9 +270,9 @@
             <dd>
               <ul>
                 <li>1. 개인 개발</li>
-                <li>2. Figma 활용</li>
-                <li>3. HTML/CSS/JavaScript 사용</li>
-                <li>4. Server API 활용</li>
+                <li>2. HTML/CSS/JavaScript</li>
+                <li>3. Server API</li>
+                <li>4. Figma</li>
               </ul>
             </dd>
           </div>
@@ -282,6 +290,11 @@
                   <small>가. 로그인/ 로그아웃</small>
                   <small>나. 게시물 불러오기/ 상세보기</small>
                 </li>
+                <li>
+                  <strong class="txt_block">3. 한계</strong>
+                  <small>가. http 서버 호출로 인한 미작동</small>
+                  <small>나. React 프로젝트를 Vanilla JS로 구현, 토큰 전송의 한계</small>
+                </li>
               </ul>
             </dd>
           </div>
@@ -296,10 +309,9 @@
             <dt>작품 개요</dt>
             <dd>
               <ul>
-                <li><a href="" class="txt_git">1. GitHub로 이동하기</a></li>
-                <li>2. 멋쟁이사자처럼 프론트엔드 스쿨 1기 개인 프로젝트</li>
-                <li>3. 반응형 페이지 제작</li>
-                <li>4. 전문가가 되기 위해서는 1만 시간이 필요하다는 법칙이다. 사용자들의 목표 달성을 위해 필요한 시간을 알려주고, 응원해준다.</li>
+                <li><a href="https://github.com/postop09/10000hours" class="txt_git">1. GitHub로 이동하기</a></li>
+                <li>2. 반응형 페이지 제작</li>
+                <li>3. 전문가가 되기 위해서는 1만 시간이 필요하다는 법칙이다. 사용자들의 목표 달성을 위해 필요한 시간을 알려주고, 응원해준다.</li>
               </ul>
             </dd>
           </div>
@@ -309,8 +321,8 @@
               <ul>
                 <li>1. 개인 개발</li>
                 <li>2. 멘토님에게 피드백, 코드리뷰 요청</li>
-                <li>3. Figma 활용</li>
-                <li>4. HTML/CSS/JavaScript 사용</li>
+                <li>4. HTML/CSS/JavaScript</li>
+                <li>3. Figma</li>
               </ul>
             </dd>
           </div>
@@ -336,9 +348,6 @@
       </article>
     </section>
   </main>
-  <footer class="index_footer">
-
-  </footer>
   <script src="../JavaScript/index.js"></script>
 </body>
 </html>

@@ -63,7 +63,7 @@ function listWorks() {
   const btnWorks = works.querySelectorAll('.btn_work');
   const articWorks = works.querySelectorAll('.artic_work');
   const listWorks = works.querySelector('.list_works');
-  const [articTeam, articPortfolio, articOpen, articHour] = [...articWorks];
+  const [articTeam, articPortfolio, articNetflix, articOpen] = [...articWorks];
 
   listWorks.addEventListener('click', (e) => {
     [...btnWorks].map((btn) => {
@@ -74,15 +74,16 @@ function listWorks() {
     [...articWorks].map((work) => {
       work.classList.remove('on');
     });
+
     if (e.target.className == 'btn_work btn_workTeam on') {
       articTeam.classList.add('on');
     } else if (e.target.className == 'btn_work btn_workPortfolio on') {
       articPortfolio.classList.add('on');
+    } else if (e.target.className == 'btn_work btn_netflix on') {
+      articNetflix.classList.add('on');
     } else if (e.target.className == 'btn_work btn_workOpen on') {
       articOpen.classList.add('on');
-    } else if (e.target.className == 'btn_work btn_workHour on') {
-      articHour.classList.add('on');
-    }
+    } 
   })
 }
 listWorks()

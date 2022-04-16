@@ -512,12 +512,12 @@
           animation: career 1s forwards .5s;
 }
 
-.sec_works .wrap_btnWorks .list_works .btn_workOpen {
+.sec_works .wrap_btnWorks .list_works .btn_netflix {
   -webkit-animation: career 1s forwards .6s;
           animation: career 1s forwards .6s;
 }
 
-.sec_works .wrap_btnWorks .list_works .btn_workHour {
+.sec_works .wrap_btnWorks .list_works .btn_workOpen {
   -webkit-animation: career 1s forwards .7s;
           animation: career 1s forwards .7s;
 }
@@ -542,11 +542,13 @@
           animation: career 2s forwards .1s;
 }
 
-.sec_works .artic_work .txt_link {
+.sec_works .artic_work .txt_link,
+.sec_works .artic_work .txt_linkError {
   position: relative;
 }
 
-.sec_works .artic_work .txt_link::after {
+.sec_works .artic_work .txt_link::after,
+.sec_works .artic_work .txt_linkError::after {
   content: '위 이미지를 누르면 해당 페이지로 이동합니다.';
   display: block;
   position: absolute;
@@ -561,6 +563,10 @@
   -webkit-animation: opacity 2s forwards .1s;
           animation: opacity 2s forwards .1s;
   cursor: default;
+}
+
+.sec_works .artic_work .txt_linkError::after {
+  content: '위 이미지를 누르면 페이지 오류로 인해 깃허브로 이동합니다.';
 }
 
 .sec_works .artic_work .txt_block {

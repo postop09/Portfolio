@@ -2,6 +2,16 @@ const header = document.querySelector('.index_header');
 const themes = document.querySelectorAll('.sec_theme');
 const [intro, career, skills, works] = [...themes];
 
+// 로딩
+function loading() {
+  const secLoading = document.querySelector('.sec_loading');
+  const secMain = document.querySelector('.index_main');
+
+  secMain.classList.add('on');
+  secLoading.classList.remove('on');
+}
+setTimeout(loading, 3000);
+
 // 내비게이션
 function navigation() {
   const btnCareer = header.querySelector('.btn_career');

@@ -37,7 +37,7 @@
 * {
   font-family: 'appleGothic';
 }
-.sec_linkIntro {
+.btn_linkIntro {
   position: absolute;
   top: -100px;
   left: 0;
@@ -51,11 +51,27 @@
     top: 0;
   }
 }
+.sec_loading.on {
+  display: block;
+}
+.sec_loading {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 100;
+  .txt_loading {
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 .index_header {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 100;
 }
 .list_nav {
   display: flex;
@@ -75,11 +91,16 @@
 }
 
 // 표지
+.index_main.on {
+  display: block;
+}
+.index_main {
+  display: none;
+}
 .sec_theme.on {
   display: flex;
 }
 .sec_intro {
-  display: none;
   position: relative;
   height: 100vh;
   overflow: hidden;

@@ -118,7 +118,6 @@
   width: 100vw;
   height: 100vh;
   background-color: #fff;
-  z-index: 100;
 }
 
 .sec_loading .txt_loading {
@@ -130,10 +129,16 @@
           transform: translate(-50%, -50%);
 }
 
+.index_header.on {
+  display: block;
+}
+
 .index_header {
+  display: none;
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 100;
 }
 
 .list_nav {
@@ -174,6 +179,7 @@
 }
 
 .sec_intro {
+  display: none;
   position: relative;
   height: 100vh;
   overflow: hidden;

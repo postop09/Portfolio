@@ -2,15 +2,27 @@ const header = document.querySelector('.index_header');
 const themes = document.querySelectorAll('.sec_theme');
 const [intro, career, skills, works] = [...themes];
 
+// 페이지 메인
+function reload() {
+  const btnReload = document.querySelector('.btn_linkIntro');
+
+  btnReload.addEventListener('click', () => {
+    window.location.reload();
+  })
+}
+reload();
+
 // 로딩
 function loading() {
   const secLoading = document.querySelector('.sec_loading');
   const secMain = document.querySelector('.index_main');
+  const secHeader = document.querySelector('.index_header');
 
   secMain.classList.add('on');
   secLoading.classList.remove('on');
+  secHeader.classList.add('on');
 }
-setTimeout(loading, 3000);
+setTimeout(loading, 2500);
 
 // 내비게이션
 function navigation() {

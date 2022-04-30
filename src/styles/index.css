@@ -540,17 +540,17 @@
           animation: career 1s forwards .4s;
 }
 
-.sec_works .wrap_btnWorks .list_works .btn_workPortfolio {
+.sec_works .wrap_btnWorks .list_works .btn_momo {
   -webkit-animation: career 1s forwards .5s;
           animation: career 1s forwards .5s;
 }
 
-.sec_works .wrap_btnWorks .list_works .btn_netflix {
+.sec_works .wrap_btnWorks .list_works .btn_workPortfolio {
   -webkit-animation: career 1s forwards .6s;
           animation: career 1s forwards .6s;
 }
 
-.sec_works .wrap_btnWorks .list_works .btn_workOpen {
+.sec_works .wrap_btnWorks .list_works .btn_netflix {
   -webkit-animation: career 1s forwards .7s;
           animation: career 1s forwards .7s;
 }
@@ -599,7 +599,7 @@
 }
 
 .sec_works .artic_work .txt_linkError::after {
-  content: '위 이미지를 누르면 페이지 오류로 인해 깃허브로 이동합니다.';
+  content: '위 이미지를 누르면 서버 폐쇄로 인해 깃허브로 이동합니다.';
 }
 
 .sec_works .artic_work .txt_block {

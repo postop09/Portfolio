@@ -85,7 +85,7 @@ function listWorks() {
   const btnWorks = works.querySelectorAll('.btn_work');
   const articWorks = works.querySelectorAll('.artic_work');
   const listWorks = works.querySelector('.list_works');
-  const [articTeam, articPortfolio, articNetflix, articOpen] = [...articWorks];
+  const [articTeam, articPortfolio, articNetflix, articMomo] = [...articWorks];
 
   listWorks.addEventListener('click', (e) => {
     [...btnWorks].map((btn) => {
@@ -103,8 +103,8 @@ function listWorks() {
       articPortfolio.classList.add('on');
     } else if (e.target.className == 'btn_work btn_netflix on') {
       articNetflix.classList.add('on');
-    } else if (e.target.className == 'btn_work btn_workOpen on') {
-      articOpen.classList.add('on');
+    } else if (e.target.className == 'btn_work btn_momo on') {
+      articMomo.classList.add('on');
     } 
   })
 }

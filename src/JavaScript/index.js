@@ -12,18 +12,6 @@ function reload() {
 }
 reload();
 
-// 로딩
-function loading() {
-  const secLoading = document.querySelector('.sec_loading');
-  const secMain = document.querySelector('.index_main');
-  const secHeader = document.querySelector('.index_header');
-
-  secMain.classList.add('on');
-  secLoading.classList.remove('on');
-  secHeader.classList.add('on');
-}
-setTimeout(loading, 2500);
-
 // 내비게이션
 function navigation() {
   const btnCareer = header.querySelector('.btn_career');

@@ -423,10 +423,14 @@
   position: relative;
 }
 
+.sec_skills .list_skills {
+  position: relative;
+}
+
 .sec_skills .txt_skill {
   display: none;
   position: absolute;
-  top: -40px;
+  top: -330px;
   left: 200px;
   line-height: 300px;
   font-size: 250px;
@@ -631,5 +635,39 @@
 .sec_works .artic_work .list_workDetail .wrap_core {
   -webkit-animation: career 1s forwards .9s;
           animation: career 1s forwards .9s;
+}
+
+@media screen and (max-width: 1440px) {
+  .sec_intro .txt_backName {
+    font-size: 200px;
+    line-height: 250px;
+  }
+  .sec_career {
+    max-width: 1280px;
+  }
+  .sec_career .txt_title {
+    margin-bottom: 30px;
+  }
+  .sec_skills {
+    max-width: 1280px;
+  }
+  .sec_skills .txt_skill {
+    line-height: 240px;
+    font-size: 230px;
+  }
+  .sec_works {
+    max-width: 1280px;
+  }
+  .sec_works .artic_work .img_work {
+    width: 400px;
+    height: 600px;
+  }
+  .sec_works .artic_work .list_workDetail dt {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .sec_works .artic_work .list_workDetail li {
+    font-size: 18px;
+  }
 }
 /*# sourceMappingURL=index.css.map */

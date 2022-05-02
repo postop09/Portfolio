@@ -294,10 +294,13 @@
   .wrap_skillLevel {
     position: relative;
   }
+  .list_skills {
+    position: relative;
+  }
   .txt_skill {
     display: none;
     position: absolute;
-    top: -40px;
+    top: -330px;
     left: 200px;
     line-height: 300px;
     font-size: 250px;
@@ -445,6 +448,51 @@
       }
       .wrap_core {
         animation: career 1s forwards .9s;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1440px) {
+  // 표지
+  .sec_intro {
+    .txt_backName {
+      font-size: 200px;
+      line-height: 250px;
+    }
+  }
+  // 소개
+  .sec_career {
+    max-width: 1280px;
+    .txt_title {
+      margin-bottom: 30px;
+    }
+  }
+  // 기술
+  .sec_skills {
+    max-width: 1280px;
+    .txt_skill {
+      line-height: 240px;
+      font-size: 230px;
+    }
+  }
+  // 작품
+  .sec_works {
+    max-width: 1280px;
+    .artic_work {
+      .img_work {
+        width: 400px;
+        height: 600px;
+      }
+      .list_workDetail {
+        dt {
+          font-size: 20px;
+          font-weight: 700;
+        }
+        li {
+          font-size: 18px;
+        }
       }
     }
   }

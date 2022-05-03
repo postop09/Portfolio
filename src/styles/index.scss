@@ -497,3 +497,35 @@
     }
   }
 }
+@media screen and (max-width: 1180px) {
+    // 표지
+    .sec_intro {
+      .txt_backName {
+        font-size: 200px;
+        line-height: 250px;
+      }
+    }
+    // 소개
+    .sec_career {
+      max-width: 916px;
+      .txt_title {
+        margin-bottom: 30px;
+      }
+    }
+  // 기술
+  .sec_skills {
+    max-width: 916px;
+    .list_level {
+      .wrap_content {
+        display: block;
+      }
+    }
+    .txt_skill {
+      line-height: 210px;
+      font-size: 180px;
+    }
+    .txt_smallLetter {
+      font-size: 150px;
+    }
+  }
+}

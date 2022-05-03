@@ -670,4 +670,30 @@
     font-size: 18px;
   }
 }
+
+@media screen and (max-width: 1180px) {
+  .sec_intro .txt_backName {
+    font-size: 200px;
+    line-height: 250px;
+  }
+  .sec_career {
+    max-width: 916px;
+  }
+  .sec_career .txt_title {
+    margin-bottom: 30px;
+  }
+  .sec_skills {
+    max-width: 916px;
+  }
+  .sec_skills .list_level .wrap_content {
+    display: block;
+  }
+  .sec_skills .txt_skill {
+    line-height: 210px;
+    font-size: 180px;
+  }
+  .sec_skills .txt_smallLetter {
+    font-size: 150px;
+  }
+}
 /*# sourceMappingURL=index.css.map */

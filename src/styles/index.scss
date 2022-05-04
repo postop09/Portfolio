@@ -300,7 +300,7 @@
   .txt_skill {
     display: none;
     position: absolute;
-    top: -330px;
+    top: -400px;
     left: 200px;
     line-height: 300px;
     font-size: 250px;
@@ -526,6 +526,24 @@
     }
     .txt_smallLetter {
       font-size: 150px;
+    }
+  }
+  // 작품
+  .sec_works {
+    .artic_work {
+      .img_work {
+        width: 400px;
+        height: 600px;
+      }
+      .list_workDetail {
+        dt {
+          font-size: 17px;
+          font-weight: 700;
+        }
+        li {
+          font-size: 16px;
+        }
+      }
     }
   }
 }

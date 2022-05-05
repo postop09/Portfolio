@@ -2,6 +2,16 @@ const header = document.querySelector('.index_header');
 const themes = document.querySelectorAll('.sec_theme');
 const [intro, career, skills, works] = [...themes];
 
+// 로딩
+// function loading() {
+//   const $imgMe = document.querySelector('.img_me');
+
+//   $imgMe.addEventListener('load', () => {
+//     console.log('rendering');
+//   })
+// }
+// loading();
+
 // 페이지 메인
 function reload() {
   const btnReload = document.querySelector('.btn_linkIntro');
@@ -96,4 +106,4 @@ function listWorks() {
     } 
   })
 }
-listWorks()
+listWorks();

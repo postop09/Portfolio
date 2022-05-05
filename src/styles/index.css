@@ -184,15 +184,6 @@
   position: absolute;
   top: 200px;
   right: 300px;
-  border-radius: 100%;
-  width: 300px;
-  height: 300px;
-  padding-top: 20px;
-  background-image: url(../images/img_me.jpg);
-  background-size: cover;
-  background-position: center center;
-  -webkit-animation: backgroundDot 2s forwards;
-          animation: backgroundDot 2s forwards;
 }
 
 .sec_intro .dot3 {
@@ -219,6 +210,18 @@
   opacity: 0;
   -webkit-animation: backgroundDot 5s forwards .5s;
           animation: backgroundDot 5s forwards .5s;
+}
+
+.sec_intro .img_me {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  border-radius: 100%;
+  width: 300px;
+  height: 300px;
+  -webkit-animation: backgroundDot 2s forwards;
+          animation: backgroundDot 2s forwards;
 }
 
 .sec_career {

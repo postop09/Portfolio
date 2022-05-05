@@ -111,14 +111,6 @@
     position: absolute;
     top: 200px;
     right: 300px;
-    border-radius: 100%;
-    width: 300px;
-    height: 300px;
-    padding-top: 20px;
-    background-image: url(../images/img_me.jpg);
-    background-size: cover;
-    background-position: center center;
-    animation: backgroundDot 2s forwards;
   }
   .dot3 {
     position: absolute;
@@ -141,6 +133,14 @@
     background-color: lightgoldenrodyellow;
     opacity: 0;
     animation: backgroundDot 5s forwards .5s;
+  }
+  .img_me {
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 100%;
+    width: 300px;
+    height: 300px;
+    animation: backgroundDot 2s forwards;
   }
 }
 

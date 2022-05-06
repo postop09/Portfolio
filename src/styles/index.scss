@@ -7,7 +7,7 @@
 // 애니메이션
 @keyframes backgroundDot {
   0% {
-    opacity: 0.1;
+    opacity: 0;
   }
   100% {
     opacity: .4;
@@ -140,7 +140,8 @@
     border-radius: 100%;
     width: 300px;
     height: 300px;
-    animation: backgroundDot 2s forwards;
+    opacity: 0;
+    animation: backgroundDot 2s forwards 1s;
   }
 }
 
@@ -159,7 +160,7 @@
     font-size: 50px;
     margin-bottom: 50px;
     opacity: 0;
-    animation: career 2s forwards 1s;
+    animation: career 2s forwards;
   }
   .artic_career {
     margin-bottom: 40px;
@@ -188,10 +189,10 @@
     }
   }
   .artic_front {
-    animation: career 2s forwards 1.3s;
+    animation: career 2s forwards .3s;
   }
   .artic_react {
-    animation: career 2s forwards 1.6s;
+    animation: career 2s forwards .6s;
   }
   .dot1 {
     position: absolute;
@@ -230,38 +231,18 @@
   .txt_title {
     display: block;
     font-size: 50px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     opacity: 0;
     animation: career 2s forwards;
-  }
-  .list_level {
-    display: flex;
-    margin-bottom: 50px;
-    opacity: 0;
-    animation: career 2s forwards .2s;
-    .wrap_content {
-      display: flex;
-      margin-right: 10px;
-    }
-    dt,
-    dd {
-      color: dimgray;
-    }
-    dt {
-      font-size: 18px;
-      font-weight: 700;
-    }
-    dd {
-      font-size: 16px;
-      margin-left: 7px;
-    }
   }
   .list_levels {
     .btn_level {
       border: none;
       border-bottom: 3px solid dimgray;
+      width: 170px;
       margin-bottom: 30px;
       padding-bottom: 10px;
+      text-align: left;
       font-size: 36px;
       font-weight: 700;
       color: darkgray;
@@ -271,11 +252,11 @@
       cursor: pointer;
     }
     .btn_level:hover {
-      padding-right: 25px;
+      width: 195px;
       color: coral;
     }
     .btn_level.on {
-      padding-right: 25px;
+      width: 195px;
       color: black;
     }
     .btn_level5 {
@@ -300,19 +281,19 @@
   .txt_skill {
     display: none;
     position: absolute;
-    top: -400px;
-    left: 200px;
-    line-height: 300px;
-    font-size: 250px;
+    top: -370px;
+    left: 220px;
+    line-height: 55px;
+    font-size: 40px;
     opacity: 0;
-    animation: career 2s forwards;
+    animation: career 2s forwards .3s;
     cursor: default;
   }
   .txt_skill.on {
     display: block;
   }
-  .txt_smallLetter {
-    font-size: 200px;
+  .txt_detail {
+    margin-bottom: 40px;
   }
 }
 
@@ -473,8 +454,8 @@
   .sec_skills {
     max-width: 1280px;
     .txt_skill {
-      line-height: 240px;
-      font-size: 230px;
+      line-height: 50px;
+      font-size: 35px;
     }
   }
   // 작품
@@ -519,10 +500,6 @@
       .wrap_content {
         display: block;
       }
-    }
-    .txt_skill {
-      line-height: 210px;
-      font-size: 180px;
     }
     .txt_smallLetter {
       font-size: 150px;

@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>조윤식의 페이지</title>
-  <link rel="stylesheet" href="../styles/index.css">
+  <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
   <button type='button' class="btn_linkIntro">메인 화면으로 이동</button>
@@ -42,7 +42,7 @@
         <span>식</span>
       </p>
       <div class="dot1"></div>
-      <div class="dot2"><img src="../images/img_me.jpg" alt="" class="img_me"></div>
+      <div class="dot2"><img src="../img/img_me.jpg" alt="" class="img_me"></div>
       <div class="dot3"></div>
       <div class="dot4"></div>
     </section>
@@ -100,42 +100,36 @@
     <!-- 기술 -->
     <section class="sec_theme sec_skills">
       <h3 class="txt_hide">기술</h3>
-      <strong class="txt_title">수행 능력 및 사용 기술</strong>
-      <div class="wrap_skillLevel">
-        <ul class="list_levels">
-          <li class="item_skill"><button type="button" class="btn_level btn_level5 on">HTML</button></li>
-          <li class="item_skill"><button type="button" class="btn_level btn_level4">CSS/SCSS</button></li>
-          <li class="item_skill"><button type="button" class="btn_level btn_level3">JavaScript</button></li>
-          <li class="item_skill"><button type="button" class="btn_level btn_level2">React.js</button></li>
+      <div class="wrap_skill">
+        <article class="wrap_skillImg">
+          <img src="../img/icon_html.png" alt="HTML" class="img_skill">
+          <h4 class="txt_skillName">HTML</h4>
+          <p class="txt_subTitle">FRONTEND DEVELOPER SKILLS</p>
+        </article>		
+        <strong class="btn_view">활용 능력과 방향성</strong>
+        <ul class="list_point">
+          <li class="item_point">
+            Semantic Mark-up
+          </li>
+          <li class="item_point">
+            웹 표준과 웹 접근성
+          </li>
         </ul>
         <ul class="list_skills">
-          <li class="txt_skill on">
-            <ul>
-              <li class="txt_detail">각 태그의 의미를 이해하고, 의미에 맞게 사용합니다.</li>
-              <li class="txt_detail">구역/구획, 보조기구 사용자들을 위한 코드 구조를 이해하고, 웹 접근성을 준수한 코드를 작성합니다.</li>
-              <li class="txt_detail">불필요한 'div' 태그를 사용하는 것을 지양합니다.</li>
-            </ul>
+          <li class="item_skill">
+            <button type="button" name="html" class="item_dot btn_html"></button>
           </li>
-          <li class="txt_skill">
-            <ul>
-              <li class="txt_detail">나만의 스타일 작성법을 정리하고, 체계적이고 일관된 코드를 위해 노력합니다.</li>
-              <li class="txt_detail">명확하고 이해가 가능한 class name을 작성하기위해 고민합니다.</li>
-              <li class="txt_detail">mixin, 변수를 활용하여 코드 단축과 유지보수를 위한 코드를 작성합니다.</li>
-            </ul>
+          <li class="item_skill">
+            <button type="button" name="css" class="item_dot btn_css"></button>
           </li>
-          <li class="txt_skill">
-            <ul>
-              <li class="txt_detail">async/await, fetch를 이용한 API 비동기 통신을 사용합니다.</li>
-              <li class="txt_detail">중복되는 변수를 방지하기 위해 함수형 코드 구조를 활용하고, 클린 코드를 위해 노력합니다.</li>
-              <li class="txt_detail"></li>
-            </ul>
+          <li class="item_skill">
+            <button type="button" name="scss" class="item_dot btn_scss"></button>
           </li>
-          <li class="txt_skill">
-            <ul>
-              <li class="txt_detail">useStatet의 상태 저장/관리, useEffect를 통한 마운트/언마운트/업데이트 시 작업 수행을 이해하고 사용합니다.</li>
-              <li class="txt_detail">props의 사용과 논리적인 단위의components 구성을 위해 고민합니다.</li>
-              <li class="txt_detail">의미에 맞게 태그를 사용하기 위해 노력합니다.</li>
-            </ul>
+          <li class="item_skill">
+            <button type="button" name="js" class="item_dot btn_js"></button>
+          </li>
+          <li class="item_skill">
+            <button type="button" name="react" class="item_dot btn_react"></button>
           </li>
         </ul>
       </div>
@@ -355,6 +349,6 @@
       </article>
     </section>
   </main>
-  <script src="../JavaScript/index.js"></script>
+  <script src="../js/index.js"></script>
 </body>
 </html>

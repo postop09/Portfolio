@@ -9,6 +9,11 @@
   color: black;
 }
 
+button {
+  border: none;
+  cursor: pointer;
+}
+
 .txt_hide {
   position: absolute;
   clip: rect(0 0 0 0);

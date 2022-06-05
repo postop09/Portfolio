@@ -9,6 +9,11 @@
   color: black;
 }
 
+button {
+  border: none;
+  cursor: pointer;
+}
+
 .txt_hide {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -86,6 +91,32 @@
     opacity: 1;
     -webkit-transform: translateX(0);
             transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes skills {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(50px, -50%);
+            transform: translate(50px, -50%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes skills {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(50px, -50%);
+            transform: translate(50px, -50%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 }
 
@@ -321,105 +352,132 @@
           animation: backgroundDot 4s forwards;
 }
 
+.sec_skills.on {
+  display: block;
+}
+
 .sec_skills {
   display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: relative;
-  max-width: 1440px;
   height: 100vh;
-  margin: auto;
-  overflow: hidden;
+  background-color: #fc470b31;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
-.sec_skills .txt_title {
-  display: block;
-  font-size: 50px;
-  margin-bottom: 30px;
-  opacity: 0;
-  -webkit-animation: career 2s forwards;
-          animation: career 2s forwards;
-}
-
-.sec_skills .list_levels .btn_level {
-  border: none;
-  border-bottom: 3px solid dimgray;
-  width: 170px;
-  margin-bottom: 30px;
-  padding-bottom: 10px;
-  text-align: left;
-  font-size: 36px;
-  font-weight: 700;
-  color: darkgray;
-  background-color: white;
-  opacity: 0;
-  -webkit-transition: all .25s;
-  transition: all .25s;
-  cursor: pointer;
-}
-
-.sec_skills .list_levels .btn_level:hover {
-  width: 195px;
-  color: coral;
-}
-
-.sec_skills .list_levels .btn_level.on {
-  width: 195px;
-  color: black;
-}
-
-.sec_skills .list_levels .btn_level5 {
-  -webkit-animation: career 1s forwards .4s;
-          animation: career 1s forwards .4s;
-}
-
-.sec_skills .list_levels .btn_level4 {
-  -webkit-animation: career 1s forwards .5s;
-          animation: career 1s forwards .5s;
-}
-
-.sec_skills .list_levels .btn_level3 {
-  -webkit-animation: career 1s forwards .6s;
-          animation: career 1s forwards .6s;
-}
-
-.sec_skills .list_levels .btn_level2 {
-  -webkit-animation: career 1s forwards .7s;
-          animation: career 1s forwards .7s;
-}
-
-.sec_skills .wrap_skillLevel {
-  position: relative;
-}
-
-.sec_skills .list_skills {
-  position: relative;
-}
-
-.sec_skills .txt_skill {
-  display: none;
+.sec_skills .wrap_skill {
   position: absolute;
-  top: -370px;
-  left: 220px;
-  line-height: 55px;
-  font-size: 40px;
-  opacity: 0;
-  -webkit-animation: career 2s forwards .3s;
-          animation: career 2s forwards .3s;
-  cursor: default;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  width: 340px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 30px;
+  background-color: #fff;
+  text-align: center;
+  -webkit-animation: skills 1s forwards;
+          animation: skills 1s forwards;
 }
 
-.sec_skills .txt_skill.on {
+.sec_skills .wrap_skill .img_skill {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+.sec_skills .wrap_skill .txt_skillName {
+  font-size: 24px;
+  color: dimgray;
+}
+
+.sec_skills .wrap_skill .txt_subTitle {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #bbb;
+}
+
+.sec_skills .wrap_skill .btn_view {
   display: block;
+  -webkit-box-shadow: 5px 5px 10px #0000004d;
+          box-shadow: 5px 5px 10px #0000004d;
+  border-radius: 16px;
+  width: 180px;
+  height: 32px;
+  margin: 0px auto 20px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: center;
+  color: #fff;
+  background-color: #fc490b;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
-.sec_skills .txt_detail {
-  margin-bottom: 40px;
+.sec_skills .list_point {
+  margin-bottom: 25px;
+}
+
+.sec_skills .list_point .item_point {
+  border-bottom: 1px solid #eee;
+  width: 100%;
+  padding: 10px 0px;
+  letter-spacing: 1px;
+  color: dimgray;
+}
+
+.sec_skills .list_point .item_point:last-child {
+  border-bottom: none;
+}
+
+.sec_skills .list_skills .item_skill {
+  display: inline-block;
+}
+
+.sec_skills .list_skills .item_dot {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0px 10px;
+  opacity: 0.4;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.sec_skills .list_skills .btn_html {
+  background-color: #fc490b;
+  -webkit-box-shadow: 5px 5px 10px #fc470bad;
+          box-shadow: 5px 5px 10px #fc470bad;
+  opacity: 1;
+}
+
+.sec_skills .list_skills .btn_css {
+  background-color: #2196f3;
+  -webkit-box-shadow: 5px 5px 10px #2196f3ad;
+          box-shadow: 5px 5px 10px #2196f3ad;
+}
+
+.sec_skills .list_skills .btn_scss {
+  background-color: #cc6699;
+  -webkit-box-shadow: 5px 5px 10px #cc6699ad;
+          box-shadow: 5px 5px 10px #cc6699ad;
+}
+
+.sec_skills .list_skills .btn_js {
+  background-color: #ffdf00;
+  -webkit-box-shadow: 5px 5px 10px #ffdf00ad;
+          box-shadow: 5px 5px 10px #ffdf00ad;
+}
+
+.sec_skills .list_skills .btn_react {
+  background-color: #5ed3f3;
+  -webkit-box-shadow: 5px 5px 10px #5ed3f3ad;
+          box-shadow: 5px 5px 10px #5ed3f3ad;
 }
 
 .sec_works {
@@ -622,13 +680,6 @@
   .sec_career .txt_title {
     margin-bottom: 30px;
   }
-  .sec_skills {
-    max-width: 1280px;
-  }
-  .sec_skills .txt_skill {
-    line-height: 50px;
-    font-size: 35px;
-  }
   .sec_works {
     max-width: 1280px;
   }
@@ -655,15 +706,6 @@
   }
   .sec_career .txt_title {
     margin-bottom: 30px;
-  }
-  .sec_skills {
-    max-width: 916px;
-  }
-  .sec_skills .list_level .wrap_content {
-    display: block;
-  }
-  .sec_skills .txt_smallLetter {
-    font-size: 150px;
   }
   .sec_works .artic_work .img_work {
     width: 400px;

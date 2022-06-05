@@ -32,6 +32,16 @@
     transform: translateX(0);
   }
 }
+@keyframes skills {
+  0% {
+    opacity: 0;
+    transform: translate(50px, -50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
 
 // 스타일
 * {
@@ -219,81 +229,103 @@
 }
 
 // 기술
+.sec_skills.on {
+  display: block;
+}
 .sec_skills {
   display: none;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  max-width: 1440px;
   height: 100vh;
-  margin: auto;
-  overflow: hidden;
-  .txt_title {
-    display: block;
-    font-size: 50px;
-    margin-bottom: 30px;
-    opacity: 0;
-    animation: career 2s forwards;
+  background-color: #fc470b31;
+  transition: all .5s;
+  .wrap_skill {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 340px;
+    height: fit-content;
+    padding: 30px;
+    background-color: #fff;
+    text-align: center;
+    animation: skills 1s forwards;
+    .img_skill {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 20px;
+    }
+    .txt_skillName {
+      font-size: 24px;
+      color: dimgray;
+    }
+    .txt_subTitle {
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: #bbb;
+    }
+    .btn_view {
+      display: block;
+      box-shadow: 5px 5px 10px #0000004d;
+      border-radius: 16px;
+      width: 180px;
+      height: 32px;
+      margin: 0px auto 20px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 32px;
+      text-align: center;
+      color: #fff;
+      background-color: #fc490b;
+      transition: all .5s;
+    }
   }
-  .list_levels {
-    .btn_level {
-      border: none;
-      border-bottom: 3px solid dimgray;
-      width: 170px;
-      margin-bottom: 30px;
-      padding-bottom: 10px;
-      text-align: left;
-      font-size: 36px;
-      font-weight: 700;
-      color: darkgray;
-      background-color: white;
-      opacity: 0;
-      transition: all .25s;
-      cursor: pointer;
+  .list_point {
+    margin-bottom: 25px;
+    .item_point {
+      border-bottom: 1px solid #eee;
+      width: 100%;
+      padding: 10px 0px;
+      letter-spacing: 1px;
+      color: dimgray;
     }
-    .btn_level:hover {
-      width: 195px;
-      color: coral;
+    .item_point:last-child {
+      border-bottom: none;
     }
-    .btn_level.on {
-      width: 195px;
-      color: black;
-    }
-    .btn_level5 {
-      animation: career 1s forwards .4s;
-    }
-    .btn_level4 {
-      animation: career 1s forwards .5s;
-    }
-    .btn_level3 {
-      animation: career 1s forwards .6s;
-    }
-    .btn_level2 {
-      animation: career 1s forwards .7s;
-    }
-  }
-  .wrap_skillLevel {
-    position: relative;
   }
   .list_skills {
-    position: relative;
-  }
-  .txt_skill {
-    display: none;
-    position: absolute;
-    top: -370px;
-    left: 220px;
-    line-height: 55px;
-    font-size: 40px;
-    opacity: 0;
-    animation: career 2s forwards .3s;
-    cursor: default;
-  }
-  .txt_skill.on {
-    display: block;
-  }
-  .txt_detail {
-    margin-bottom: 40px;
+    .item_skill {
+      display: inline-block;
+    }
+    .item_dot {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin: 0px 10px;
+      opacity: 0.4;
+      transition: all .5s;
+    }
+    .btn_html {
+      background-color: #fc490b;
+      box-shadow: 5px 5px 10px #fc470bad;
+      opacity: 1;
+    }
+    .btn_css {
+      background-color: #2196f3;
+      box-shadow: 5px 5px 10px #2196f3ad;
+    }
+    .btn_scss {
+      background-color: #cc6699;
+      box-shadow: 5px 5px 10px #cc6699ad;
+    }
+    .btn_js {
+      background-color: #ffdf00;
+      box-shadow: 5px 5px 10px #ffdf00ad;
+    }
+    .btn_react {
+      background-color: #5ed3f3;
+      box-shadow: 5px 5px 10px #5ed3f3ad;
+    }
   }
 }
 
@@ -451,13 +483,7 @@
     }
   }
   // 기술
-  .sec_skills {
-    max-width: 1280px;
-    .txt_skill {
-      line-height: 50px;
-      font-size: 35px;
-    }
-  }
+
   // 작품
   .sec_works {
     max-width: 1280px;
@@ -494,17 +520,7 @@
       }
     }
   // 기술
-  .sec_skills {
-    max-width: 916px;
-    .list_level {
-      .wrap_content {
-        display: block;
-      }
-    }
-    .txt_smallLetter {
-      font-size: 150px;
-    }
-  }
+
   // 작품
   .sec_works {
     .artic_work {

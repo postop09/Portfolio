@@ -41,19 +41,21 @@ navigation();
 
 // 기술
 function secSkills() {
-  const $btnSkill = skills.querySelectorAll('.item_dot');
+  const $btnSkill = skills.querySelectorAll('.btn_skill');
+  const $btnTool = skills.querySelectorAll('.btn_tool');
   const $listPoint = skills.querySelector('.list_point');
+  const $listTool = skills.querySelector('.list_tool');
   const $btnView = skills.querySelector('.btn_view');
-  console.log($btnView.style.backgroundColor);
+  const $btnToolView = skills.querySelector('.btn_toolView');
 
+  // FRONTEND SKILLS
   [...$btnSkill].map((btn) => {
     btn.addEventListener('click', (e) => {
       [...$btnSkill].map((btnAll) => {
         btnAll.style.opacity = '0.4';
       })
       e.target.style.opacity = '1';
-      skillContents(e.target.name, e.target.name);
-
+      skillContents(true, e.target.name, e.target.name);
       if (e.target.name === 'html') {
         $listPoint.innerHTML = `
           <li class="item_point">
@@ -114,21 +116,65 @@ function secSkills() {
         skills.style.backgroundColor = '#5ed3f331';
         $btnView.style.color = 'black';
         $btnView.style.backgroundColor = '#5ed3f3';
+      } 
+    })
+  });
+  // CO-WORKING TOOL
+  [...$btnTool].map((btn) => {
+    btn.addEventListener('click', (e) => {
+      [...$btnTool].map((btnAll) => {
+        btnAll.style.opacity = '0.4';
+      })
+      e.target.style.opacity = '1';
+      skillContents(false, e.target.name, e.target.name);
+      if (e.target.name === 'github') {
+        $listTool.innerHTML = `
+          <li class="item_point">
+            브랜치/이슈/칸반 프로젝트
+          </li>
+          <li class="item_point">
+            기능/의미 단위의 커밋
+          </li>
+        `;
+        skills.style.backgroundColor = '#00000031';
+        $btnToolView.style.color = 'white';
+        $btnToolView.style.backgroundColor = '#000000';
+      } else if (e.target.name === 'figma') {
+        $listTool.innerHTML = `
+          <li class="item_point">
+            피그마를 통해 디자인 확인
+          </li>
+          <li class="item_point">
+            지정된 디자인을 준수
+          </li>
+        `;
+        skills.style.backgroundColor = '#a259ff31';
+        $btnToolView.style.color = 'white';
+        $btnToolView.style.backgroundColor = '#a259ff';
       }
     })
   })
 }
 secSkills();
-
-function skillContents(img, title) {
+// 이미지 및 제목 변경
+function skillContents(bool, img, title) {
   const $secSkillInfo = skills.querySelector('.wrap_skillImg');
+  const $secToolInfo = skills.querySelector('.wrap_tool');
   const Uppertitle = title.toUpperCase();
-
-  $secSkillInfo.innerHTML = `
-    <img src="../img/icon_${img}.png" alt="${img}" class="img_skill">
-    <h4 class="txt_skillName">${Uppertitle}</h4>
-    <p class="txt_subTitle">FRONTEND DEVELOPER SKILLS</p>
-  `
+  
+  if (bool === true) {
+    $secSkillInfo.innerHTML = `
+      <img src="../img/icon_${img}.png" alt="${img}" class="img_skill">
+      <h4 class="txt_skillName">${Uppertitle}</h4>
+      <p class="txt_subTitle">FRONTEND DEVELOPER SKILLS</p>
+    `
+  } else {
+    $secToolInfo.innerHTML = `
+      <img src="../img/icon_${img}.png" alt="${img}" class="img_skill">
+      <h4 class="txt_skillName">${Uppertitle}</h4>
+      <p class="txt_subTitle">CO-WORKING TOOL</p>
+    `
+  }
 }
 
 // 작품

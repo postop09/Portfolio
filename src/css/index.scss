@@ -237,19 +237,34 @@
   height: 100vh;
   background-color: #fc470b31;
   transition: all .5s;
-  .wrap_skill {
+  // Swiper
+  .swiper {
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
     width: 340px;
-    height: fit-content;
+    animation: skills 1s forwards;
+  }
+  .swiper-slide {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 18px;
+    color: #fff;
+  }
+
+  .wrap_skill {
+    // position: absolute;
+    // top: 40%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    // box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    // width: 340px;
+    // height: fit-content;
     padding: 30px;
     background-color: #fff;
     text-align: center;
-    animation: skills 1s forwards;
+    // animation: skills 1s forwards;
     .img_skill {
       width: 200px;
       height: 200px;
@@ -278,6 +293,9 @@
       color: #fff;
       background-color: #fc490b;
       transition: all .5s;
+    }
+    .btn_toolView {
+      background-color: #000000;
     }
   }
   .list_point {
@@ -325,6 +343,15 @@
     .btn_react {
       background-color: #5ed3f3;
       box-shadow: 5px 5px 10px #5ed3f3ad;
+    }
+    .btn_git {
+      background-color: #000000;
+      box-shadow: 5px 5px 10px #000000ad;
+      opacity: 1;
+    }
+    .btn_figma {
+      background-color: #a259ff;
+      box-shadow: 5px 5px 10px #a259ffad;
     }
   }
 }

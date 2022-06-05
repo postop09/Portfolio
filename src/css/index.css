@@ -364,24 +364,29 @@ button {
   transition: all .5s;
 }
 
-.sec_skills .wrap_skill {
+.sec_skills .swiper {
   position: absolute;
   top: 40%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  width: 340px;
+  -webkit-animation: skills 1s forwards;
+          animation: skills 1s forwards;
+}
+
+.sec_skills .swiper-slide {
   -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 18px;
+  color: #fff;
+}
+
+.sec_skills .wrap_skill {
   border-radius: 10px;
-  width: 340px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
   padding: 30px;
   background-color: #fff;
   text-align: center;
-  -webkit-animation: skills 1s forwards;
-          animation: skills 1s forwards;
 }
 
 .sec_skills .wrap_skill .img_skill {
@@ -417,6 +422,10 @@ button {
   background-color: #fc490b;
   -webkit-transition: all .5s;
   transition: all .5s;
+}
+
+.sec_skills .wrap_skill .btn_toolView {
+  background-color: #000000;
 }
 
 .sec_skills .list_point {
@@ -478,6 +487,19 @@ button {
   background-color: #5ed3f3;
   -webkit-box-shadow: 5px 5px 10px #5ed3f3ad;
           box-shadow: 5px 5px 10px #5ed3f3ad;
+}
+
+.sec_skills .list_skills .btn_git {
+  background-color: #000000;
+  -webkit-box-shadow: 5px 5px 10px #000000ad;
+          box-shadow: 5px 5px 10px #000000ad;
+  opacity: 1;
+}
+
+.sec_skills .list_skills .btn_figma {
+  background-color: #a259ff;
+  -webkit-box-shadow: 5px 5px 10px #a259ffad;
+          box-shadow: 5px 5px 10px #a259ffad;
 }
 
 .sec_works {

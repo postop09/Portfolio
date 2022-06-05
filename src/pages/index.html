@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>조윤식의 페이지</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
@@ -100,7 +101,74 @@
     <!-- 기술 -->
     <section class="sec_theme sec_skills">
       <h3 class="txt_hide">기술</h3>
-      <div class="wrap_skill">
+      <!-- swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="wrap_skill">
+              <article class="wrap_skillImg wrap_skillSet">
+                <img src="../img/icon_html.png" alt="HTML" class="img_skill">
+                <h4 class="txt_skillName">HTML</h4>
+                <p class="txt_subTitle">FRONTEND DEVELOPER SKILLS</p>
+              </article>		
+              <strong class="btn_view">활용 능력</strong>
+              <ul class="list_point">
+                <li class="item_point">
+                  Semantic Mark-up
+                </li>
+                <li class="item_point">
+                  웹 표준과 웹 접근성
+                </li>
+              </ul>
+              <ul class="list_skills">
+                <li class="item_skill">
+                  <button type="button" name="html" class="item_dot btn_skill btn_html"></button>
+                </li>
+                <li class="item_skill">
+                  <button type="button" name="css" class="item_dot btn_skill btn_css"></button>
+                </li>
+                <li class="item_skill">
+                  <button type="button" name="scss" class="item_dot btn_skill btn_scss"></button>
+                </li>
+                <li class="item_skill">
+                  <button type="button" name="js" class="item_dot btn_skill btn_js"></button>
+                </li>
+                <li class="item_skill">
+                  <button type="button" name="react" class="item_dot btn_skill btn_react"></button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="wrap_skill">
+              <article class="wrap_skillImg wrap_tool">
+                <img src="../img/icon_github.png" alt="github" class="img_skill">
+                <h4 class="txt_skillName">GITHUB</h4>
+                <p class="txt_subTitle">CO-WORKING TOOL</p>
+              </article>		
+              <strong class="btn_view btn_toolView">활용 능력</strong>
+              <ul class="list_point list_tool">
+                <li class="item_point">
+                  브랜치/이슈/칸반 프로젝트
+                </li>
+                <li class="item_point">
+                  기능/의미 단위의 커밋
+                </li>
+              </ul>
+              <ul class="list_skills">
+                <li class="item_skill">
+                  <button type="button" name="github" class="item_dot btn_tool btn_git"></button>
+                </li>
+                <li class="item_skill">
+                  <button type="button" name="figma" class="item_dot btn_tool btn_figma"></button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- base -->
+      <!-- <div class="wrap_skill">
         <article class="wrap_skillImg">
           <img src="../img/icon_html.png" alt="HTML" class="img_skill">
           <h4 class="txt_skillName">HTML</h4>
@@ -132,7 +200,7 @@
             <button type="button" name="react" class="item_dot btn_react"></button>
           </li>
         </ul>
-      </div>
+      </div> -->
     </section>
     <!-- 작품 -->
     <section class="sec_theme sec_works">
@@ -349,6 +417,13 @@
       </article>
     </section>
   </main>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "cards",
+      grabCursor: true,
+    });
+  </script>
   <script src="../js/index.js"></script>
 </body>
 </html>

@@ -42,6 +42,23 @@
     transform: translate(-50%, -50%);
   }
 }
+@keyframes mouseover {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  20% {
+    transform: rotateZ(25deg);
+  }
+  40% {
+    transform: rotateZ(-20deg);
+  }
+  60% {
+    transform: rotateZ(10deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
 
 // 스타일
 * {
@@ -161,7 +178,7 @@
   flex-direction: column;
   justify-content: center;
   position: relative;
-  max-width: 1440px;
+  max-width: 1280px;
   height: 100vh;
   margin: auto;
   overflow: hidden;
@@ -253,18 +270,10 @@
   }
 
   .wrap_skill {
-    // position: absolute;
-    // top: 40%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
-    // box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    // width: 340px;
-    // height: fit-content;
     padding: 30px;
     background-color: #fff;
     text-align: center;
-    // animation: skills 1s forwards;
     .img_skill {
       width: 200px;
       height: 200px;
@@ -324,170 +333,132 @@
       transition: all .5s;
     }
     .btn_html {
-      background-color: #fc490b;
       box-shadow: 5px 5px 10px #fc470bad;
+      background-color: #fc490b;
       opacity: 1;
     }
     .btn_css {
-      background-color: #2196f3;
       box-shadow: 5px 5px 10px #2196f3ad;
+      background-color: #2196f3;
     }
     .btn_scss {
-      background-color: #cc6699;
       box-shadow: 5px 5px 10px #cc6699ad;
+      background-color: #cc6699;
     }
     .btn_js {
-      background-color: #ffdf00;
       box-shadow: 5px 5px 10px #ffdf00ad;
+      background-color: #ffdf00;
     }
     .btn_react {
-      background-color: #5ed3f3;
       box-shadow: 5px 5px 10px #5ed3f3ad;
+      background-color: #5ed3f3;
     }
     .btn_git {
-      background-color: #000000;
       box-shadow: 5px 5px 10px #000000ad;
+      background-color: #000000;
       opacity: 1;
     }
     .btn_figma {
-      background-color: #a259ff;
       box-shadow: 5px 5px 10px #a259ffad;
+      background-color: #a259ff;
     }
   }
 }
 
 // 작품
 .sec_works {
-  display: none;
-  align-items: center;
-  max-width: 1440px;
-  height: 100vh;
+  max-width: 1280px;
   margin: auto;
-  overflow: hidden;
-  .wrap_btnWorks {
-    display: flex;
-    flex-direction: column;
+  .wrap_works {
+    border: 1px solid red;
     position: relative;
-    margin-right: 50px;
+    width: 100%;
+    padding: 170px 0 40px;
     .txt_title {
-      display: block;
       font-size: 50px;
-      margin-bottom: 50px;
-      opacity: 0;
-      animation: career 2s forwards;
     }
-    .list_works {
-      .btn_work {
-        border: none;
-        border-bottom: 3px solid dimgray;
-        width: 240px;
-        margin-bottom: 30px;
-        padding-bottom: 10px;
-        text-align: left;
-        font-size: 36px;
-        font-weight: 700;
-        color: darkgray;
-        background-color: white;
-        opacity: 0;
-        transition: all .25s;
-        cursor: pointer;
-      }
-      .btn_work:hover {
-        width: 265px;
-        color: coral;
-      }
-      .btn_work.on {
-        width: 265px;
-        color: black;
-      }
-      .btn_workTeam {
-        animation: career 1s forwards .4s;
-      }
-      .btn_momo {
-        animation: career 1s forwards .5s;
-      }
-      .btn_workPortfolio {
-        animation: career 1s forwards .6s;
-      }
-      .btn_netflix {
-        animation: career 1s forwards .7s;
-      }
+    .list_category {
+      display: flex;
+      margin: 25px 0 20px;
+    }
+    .item_team {
+      margin-right: 20px;
+    }
+    .btn_category {
+      font-size: 32px;
+      background: none;
     }
   }
-  .artic_work.on {
+  .sec_work {
     display: flex;
-  }
-  .artic_work {
-    display: none;
+    .btn_imgWork {
+      border-radius: 10px;
+      overflow: hidden;
+    }
     .img_work {
-      position: relative;
-      border: 2px solid dimgray;
-      width: 500px;
-      height: 700px;
-      opacity: 0;
-      animation: career 2s forwards .1s;
-    }
-    .txt_link,
-    .txt_linkError {
-      position: relative;
-    }
-    .txt_link::after,
-    .txt_linkError::after {
-      content: '위 이미지를 누르면 해당 페이지로 이동합니다.';
       display: block;
-      position: absolute;
-      bottom: -25px;
-      left: 50%;
-      width: fit-content;
-      transform: translateX(-50%);
-      opacity: 0;
-      animation: opacity 2s forwards .1s;
-      cursor: default;
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      filter: grayscale(90%);
+      transition: all .2s;
+      &:hover {
+        filter: grayscale(0%);
+      }
     }
-    .txt_linkError::after {
-      content: '위 이미지를 누르면 서버 폐쇄로 인해 깃허브로 이동합니다.';
-    }
-    .txt_block {
-      color: darkred;
-    }
-    .list_workDetail {
+    .wrap_workTxt {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      margin-top: 20px;
-      margin-left: 30px;
-      .txt_git {
-        border-bottom: 2px solid black;
-        transition: all .2s;
+      margin-left: 20px;
+    }
+    .txt_workTitle {
+      font-size: 24px;
+    }
+    .txt_company {
+      font-size: 16px;
+      color: #696969;
+    }
+    .txt_period {
+      color: #696969;
+    }
+    .txt_detail {
+      max-width: 350px;
+      margin: 30px 0 0;
+      font-weight: 400;
+      word-break: keep-all;
+    }
+    .txt_workSkill {
+      margin-top: auto;
+      font-size: 14px;
+      color: #696969;
+    }
+    .list_btnMore {
+      display: flex;
+      margin-top: 10px;
+      align-items: center;
+    }
+    .item_btnMore {
+      margin-right: 15px;
+    }
+    .btn_viewMore {
+      border-radius: 5px;
+      padding: 10px;
+      font-size: 14px;
+      background-color: rgba(0, 0, 0, 0.5);
+      transition: all .2s;
+      &:hover {
+        background-color: #000000;
+        color: white;
       }
-      .txt_git:hover {
-        border-bottom: 2px solid coral;
-        color: coral;
-      }
-      dt {
-        font-size: 30px;
-        font-weight: 700;
-      }
-      li {
-        font-size: 20px;
-      }
-      .list_contribute {
-        small {
-          display: block;
-          text-indent: 15px;
-        }
-      }
-      .wrap_content {
-        opacity: 0;
-      }
-      .wrap_summary {
-        animation: career 1s forwards .5s;
-      }
-      .wrap_setting {
-        animation: career 1s forwards .7s;
-      }
-      .wrap_core {
-        animation: career 1s forwards .9s;
+    }
+    .img_icon {
+      display: block;
+      width: 25px;
+      height: 25px;
+      background-color: none;
+      object-fit: contain;
+      &:hover {
+        animation: mouseover .8s;
       }
     }
   }
@@ -504,7 +475,6 @@
   }
   // 소개
   .sec_career {
-    max-width: 1280px;
     .txt_title {
       margin-bottom: 30px;
     }
@@ -512,24 +482,7 @@
   // 기술
 
   // 작품
-  .sec_works {
-    max-width: 1280px;
-    .artic_work {
-      .img_work {
-        width: 400px;
-        height: 600px;
-      }
-      .list_workDetail {
-        dt {
-          font-size: 20px;
-          font-weight: 700;
-        }
-        li {
-          font-size: 18px;
-        }
-      }
-    }
-  }
+  
 }
 @media screen and (max-width: 1180px) {
     // 표지
@@ -549,21 +502,5 @@
   // 기술
 
   // 작품
-  .sec_works {
-    .artic_work {
-      .img_work {
-        width: 400px;
-        height: 600px;
-      }
-      .list_workDetail {
-        dt {
-          font-size: 17px;
-          font-weight: 700;
-        }
-        li {
-          font-size: 16px;
-        }
-      }
-    }
-  }
+  
 }

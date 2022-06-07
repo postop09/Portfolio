@@ -1,3 +1,8 @@
+@font-face {
+  font-family: appleGothic;
+  src: url(../font/AppleSDGothicNeoB.ttf) format("truetype");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +11,7 @@
   text-decoration: none;
   list-style: none;
   color: black;
+  font-family: 'appleGothic';
 }
 
 button {
@@ -20,11 +26,6 @@ button {
   height: 1px;
   margin: -1px;
   overflow: hidden;
-}
-
-@font-face {
-  font-family: appleGothic;
-  src: url(../font/AppleSDGothicNeoB.ttf) format("truetype");
 }
 
 @-webkit-keyframes backgroundDot {
@@ -165,10 +166,6 @@ button {
   }
 }
 
-* {
-  font-family: 'appleGothic';
-}
-
 .btn_linkIntro {
   position: absolute;
   top: -100px;
@@ -204,15 +201,16 @@ button {
   padding: 20px 0;
 }
 
-.list_nav a {
+.list_nav .btn_nav {
   font-size: 36px;
   font-weight: 900;
   -webkit-transition: all .25s;
   transition: all .25s;
   color: dimgray;
+  background: none;
 }
 
-.list_nav a:hover {
+.list_nav .btn_nav:hover {
   color: coral;
 }
 
@@ -553,30 +551,23 @@ button {
 }
 
 .sec_works .wrap_works {
-  border: 1px solid red;
   position: relative;
   width: 100%;
   padding: 170px 0 40px;
 }
 
 .sec_works .wrap_works .txt_title {
+  display: block;
+  margin-bottom: 100px;
   font-size: 50px;
 }
 
-.sec_works .wrap_works .list_category {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 25px 0 20px;
+.sec_works .wrap_works .item_work {
+  margin-bottom: 80px;
 }
 
-.sec_works .wrap_works .item_team {
-  margin-right: 20px;
-}
-
-.sec_works .wrap_works .btn_category {
-  font-size: 32px;
-  background: none;
+.sec_works .wrap_works .item_work:last-child {
+  margin-bottom: 0;
 }
 
 .sec_works .sec_work {
@@ -586,6 +577,8 @@ button {
 }
 
 .sec_works .sec_work .btn_imgWork {
+  -webkit-box-shadow: 0 0 5px #000000;
+          box-shadow: 0 0 5px #000000;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -598,8 +591,8 @@ button {
      object-fit: cover;
   -webkit-filter: grayscale(90%);
           filter: grayscale(90%);
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 .sec_works .sec_work .img_work:hover {
@@ -633,9 +626,17 @@ button {
 
 .sec_works .sec_work .txt_detail {
   max-width: 350px;
-  margin: 30px 0 0;
   font-weight: 400;
   word-break: keep-all;
+}
+
+.sec_works .sec_work .txt_detail::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-bottom: 30px;
+  background-color: #696969;
 }
 
 .sec_works .sec_work .txt_workSkill {
@@ -684,6 +685,91 @@ button {
 .sec_works .sec_work .img_icon:hover {
   -webkit-animation: mouseover .8s;
           animation: mouseover .8s;
+}
+
+.sec_modalDetail.on {
+  display: block;
+}
+
+.sec_modalDetail {
+  display: none;
+  position: fixed;
+  top: 150px;
+  right: 70px;
+  -webkit-box-shadow: 0 0 10px #000000;
+          box-shadow: 0 0 10px #000000;
+  border-radius: 10px;
+  background-color: #ffffff;
+  z-index: 100;
+}
+
+.sec_modalDetail .wrap_modalDetail {
+  width: 700px;
+  padding: 30px 20px 20px;
+  overflow: hidden;
+}
+
+.sec_modalDetail .wrap_modalDetail .img_detail {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: #000000;
+}
+
+.sec_modalDetail .wrap_modalDetail .txt_title {
+  margin: 10px 0;
+  font-size: 24px;
+}
+
+.sec_modalDetail .wrap_modalDetail dt {
+  font-weight: 700;
+}
+
+.sec_modalDetail .wrap_modalDetail .btn_close {
+  float: right;
+  border-radius: 5px;
+  padding: 7px 10px;
+  font-size: 16px;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.sec_modalDetail .wrap_modalDetail .btn_close:hover {
+  background-color: #000000;
+  color: white;
+}
+
+.sec_modalImg.on {
+  display: block;
+}
+
+.sec_modalImg {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #00000050;
+  z-index: 200;
+}
+
+.sec_modalImg .wrap_modalImg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-shadow: 0 0 10px #000000;
+          box-shadow: 0 0 10px #000000;
+  background-color: #ffffff;
+}
+
+.sec_modalImg .wrap_modalImg .img_modal {
+  max-width: 700px;
+  max-height: 700px;
 }
 
 @media screen and (max-width: 1440px) {

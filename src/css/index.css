@@ -545,7 +545,12 @@ button {
   background-color: #a259ff;
 }
 
+.sec_works.on {
+  display: block;
+}
+
 .sec_works {
+  display: none;
   max-width: 1280px;
   margin: auto;
 }
@@ -709,11 +714,9 @@ button {
   overflow: hidden;
 }
 
-.sec_modalDetail .wrap_modalDetail .img_detail {
+.sec_modalDetail .wrap_modalDetail .video_detail {
   width: 100%;
   height: 400px;
-  -o-object-fit: contain;
-     object-fit: contain;
   background-color: #000000;
 }
 
@@ -722,7 +725,25 @@ button {
   font-size: 24px;
 }
 
+.sec_modalDetail .wrap_modalDetail .txt_title .color_momo {
+  color: #d9730d;
+}
+
+.sec_modalDetail .wrap_modalDetail .txt_title .color_netflix {
+  color: #d91921;
+}
+
+.sec_modalDetail .wrap_modalDetail .txt_title .color_mandarine {
+  color: #ea7f42;
+}
+
+.sec_modalDetail .wrap_modalDetail .txt_subTitle {
+  display: block;
+  font-size: 20px;
+}
+
 .sec_modalDetail .wrap_modalDetail dt {
+  margin-top: 5px;
   font-weight: 700;
 }
 
@@ -756,20 +777,41 @@ button {
   z-index: 200;
 }
 
-.sec_modalImg .wrap_modalImg {
+.sec_modalImg .wrap_modalImg .swiper {
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-box-shadow: 0 0 10px #000000;
-          box-shadow: 0 0 10px #000000;
-  background-color: #ffffff;
+  max-width: 700px;
+  max-height: 700px;
+  background-color: transparent;
+}
+
+.sec_modalImg .wrap_modalImg .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .sec_modalImg .wrap_modalImg .img_modal {
-  max-width: 700px;
-  max-height: 700px;
+  -webkit-box-shadow: 0 0 10px #000000;
+          box-shadow: 0 0 10px #000000;
+  max-width: 600px;
+  max-height: 600px;
+}
+
+.sec_modalImg .wrap_modalImg .swiper-pagination {
+  bottom: 0px;
 }
 
 @media screen and (max-width: 1440px) {

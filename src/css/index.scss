@@ -360,7 +360,11 @@
 }
 
 // 작품
+.sec_works.on {
+  display: block;
+}
 .sec_works {
+  display: none;
   max-width: 1280px;
   margin: auto;
   .wrap_works {
@@ -461,6 +465,7 @@
     }
   }
 }
+
 // 자세히 보기 모달창
 .sec_modalDetail.on {
   display: block;
@@ -478,17 +483,30 @@
     width: 700px;
     padding: 30px 20px 20px;
     overflow: hidden;
-    .img_detail {
+    .video_detail {
       width: 100%;
       height: 400px;
-      object-fit: contain;
       background-color: #000000;
     }
     .txt_title {
       margin: 10px 0;
       font-size: 24px;
+      .color_momo {
+        color: #d9730d;
+      }
+      .color_netflix {
+        color: #d91921;
+      }
+      .color_mandarine {
+        color: #ea7f42;
+      }
+    }
+    .txt_subTitle {
+      display: block;
+      font-size: 20px;
     }
     dt {
+      margin-top: 5px;
       font-weight: 700;
     }
     .btn_close {
@@ -519,15 +537,30 @@
   background-color: #00000050;
   z-index: 200;
   .wrap_modalImg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0 10px #000000;
-    background-color: #ffffff;
-    .img_modal {
+    .swiper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       max-width: 700px;
       max-height: 700px;
+      background-color: transparent;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .img_modal {
+      box-shadow: 0 0 10px #000000;
+      max-width: 600px;
+      max-height: 600px;
+    }
+    .swiper-pagination {
+      bottom: 0px;
     }
   }
 }

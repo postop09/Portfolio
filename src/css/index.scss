@@ -544,6 +544,7 @@
       transform: translate(-50%, -50%);
       max-width: 700px;
       max-height: 700px;
+      padding: 20px;
       background-color: transparent;
     }
     .swiper-slide {
@@ -562,6 +563,17 @@
     .swiper-pagination {
       bottom: 0px;
     }
+  }
+  .btn_imgClose {
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    background-color: transparent;
+    z-index: 100;
+  }
+  .img_imgClose {
+    width: 25px;
+    height: 25px;
   }
 }
 

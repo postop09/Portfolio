@@ -1,9 +1,10 @@
-// 작품
-function secWorks() {
-  const $wrapSecModal = document.querySelector('.wrap_secModal');
+// 내용 자세히 보기 모달창
+const $wrapSecModal = document.querySelector('.wrap_secModal');
+
+function detailModal() {
   const $secModal = $wrapSecModal.querySelectorAll('.sec_modalDetail');
   const [$secMomo, $secNetflix, $secMandarine, $secPortfolio] = [...$secModal];
-  const $btnViewMore = $wrapSecModal.querySelectorAll('.btn_viewMore');
+  const $btnViewMore = document.querySelectorAll('.btn_viewMore');
   const $btnClose = $wrapSecModal.querySelectorAll('.btn_close');
   // 모달창 열고 닫기
   [...$btnViewMore].map((btn) => {
@@ -12,23 +13,17 @@ function secWorks() {
         sec.classList.remove('on');
       })
     })
-    if (btn.name === 'momo') {
-      btn.addEventListener('click', () => {
+    btn.addEventListener('click', () => {
+      if (btn.name === 'momo') {
         $secMomo.classList.add('on');
-      })
-    } else if (btn.name === 'netflix') {
-      btn.addEventListener('click', () => {
+      } else if (btn.name === 'netflix') {
         $secNetflix.classList.add('on');
-      })
-    } else if (btn.name === 'mandarine') {
-      btn.addEventListener('click', () => {
+      } else if (btn.name === 'mandarine') {
         $secMandarine.classList.add('on');
-      })
-    } else if (btn.name === 'portfolio') {
-      btn.addEventListener('click', () => {
+      } else if (btn.name === 'portfolio') {
         $secPortfolio.classList.add('on');
-      })
-    }
+      }
+    })
   });
   // 모달창 닫기
   [...$btnClose].map((btn) => {
@@ -40,7 +35,37 @@ function secWorks() {
     })
   });
 }
-secWorks();
+detailModal();
+
+// 이미지 모달창
+function imgModal() {
+  const $btnImg = document.querySelectorAll('.btn_imgWork');
+  const $secImgModal = $wrapSecModal.querySelectorAll('.sec_modalImg');
+  const [$secImgMomo, $secImgNetflix, $secImgMandarine, $secImgportfolio] = [...$secImgModal];
+
+  [...$btnImg].map((btn) => {
+    btn.addEventListener('click', () => {
+      if (btn.name === 'momo') {
+        $secImgMomo.classList.add('on');
+      } else if (btn.name === 'netflix') {
+        $secImgNetflix.classList.add('on');
+      } else if (btn.name === 'mandarine') {
+        $secImgMandarine.classList.add('on');
+      } else if (btn.name === 'portfolio') {
+        $secImgportfolio.classList.add('on');
+      }
+    })
+  });
+
+  [...$secImgModal].map((sec) => {
+    sec.addEventListener('click', (e) => {
+      if (e.target.className === 'sec_modalImg on' || e.target.className === 'img_imgClose') {
+        sec.classList.remove('on');
+      }
+    })
+  })
+}
+imgModal();
 
 // 노드 찾기
 function findNode(target, tName) {

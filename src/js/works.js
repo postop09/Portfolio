@@ -42,9 +42,11 @@ function imgModal() {
   const $btnImg = document.querySelectorAll('.btn_imgWork');
   const $secImgModal = $wrapSecModal.querySelectorAll('.sec_modalImg');
   const [$secImgMomo, $secImgNetflix, $secImgMandarine, $secImgportfolio] = [...$secImgModal];
+  const $body = document.querySelector('body');
 
   [...$btnImg].map((btn) => {
     btn.addEventListener('click', () => {
+      $body.style.overflow = 'hidden';
       if (btn.name === 'momo') {
         $secImgMomo.classList.add('on');
       } else if (btn.name === 'netflix') {
@@ -61,6 +63,7 @@ function imgModal() {
     sec.addEventListener('click', (e) => {
       if (e.target.className === 'sec_modalImg on' || e.target.className === 'img_imgClose') {
         sec.classList.remove('on');
+        $body.style.overflow = 'auto';
       }
     })
   })

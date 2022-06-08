@@ -16,6 +16,7 @@
 
 button {
   border: none;
+  background: none;
   cursor: pointer;
 }
 
@@ -699,7 +700,7 @@ button {
 .sec_modalDetail {
   display: none;
   position: fixed;
-  top: 150px;
+  top: 10%;
   right: 70px;
   -webkit-box-shadow: 0 0 10px #000000;
           box-shadow: 0 0 10px #000000;
@@ -709,9 +710,9 @@ button {
 }
 
 .sec_modalDetail .wrap_modalDetail {
-  width: 700px;
+  width: 35vw;
+  max-height: 90vh;
   padding: 30px 20px 20px;
-  overflow: hidden;
 }
 
 .sec_modalDetail .wrap_modalDetail .video_detail {
@@ -748,18 +749,20 @@ button {
 }
 
 .sec_modalDetail .wrap_modalDetail .btn_close {
-  float: right;
-  border-radius: 5px;
-  padding: 7px 10px;
+  position: absolute;
+  top: 3px;
+  right: 15px;
+  padding: 5px;
   font-size: 16px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: transparent;
   -webkit-transition: all .2s;
   transition: all .2s;
 }
 
-.sec_modalDetail .wrap_modalDetail .btn_close:hover {
-  background-color: #000000;
-  color: white;
+.sec_modalDetail .wrap_modalDetail .img_close {
+  display: block;
+  width: 14px;
+  height: 14px;
 }
 
 .sec_modalImg.on {
@@ -802,6 +805,12 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 
 .sec_modalImg .wrap_modalImg .img_modal {

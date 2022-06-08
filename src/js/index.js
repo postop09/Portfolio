@@ -1,12 +1,12 @@
-const header = document.querySelector('.index_header');
-const $themes = document.querySelectorAll('.sec_theme');
-const [intro, career, skills, works] = [...$themes];
+const $secHeader = document.querySelector('.index_header');
+const $secThemes = document.querySelectorAll('.sec_theme');
+const [$secIntro, $secCareer, $secSkills, $secWorks] = [...$secThemes];
 
 // 페이지 메인
 function reload() {
-  const btnReload = document.querySelector('.btn_linkIntro');
-
-  btnReload.addEventListener('click', () => {
+  const $btnReload = document.querySelector('.btn_linkIntro');
+  
+  $btnReload.addEventListener('click', () => {
     window.location.reload();
   })
 }
@@ -14,27 +14,27 @@ reload();
 
 // 내비게이션
 function navigation() {
-  const btnCareer = header.querySelector('.btn_career');
-  const btnSkills = header.querySelector('.btn_skills');
-  const btnWorks = header.querySelector('.btn_works');
+  const $btnCareer = $secHeader.querySelector('.btn_career');
+  const $btnSkills = $secHeader.querySelector('.btn_skills');
+  const $btnWorks = $secHeader.querySelector('.btn_works');
   
-  btnCareer.addEventListener('click', () => {
-    [...$themes].map((page) => {
-      page.classList.remove('on');
+  $btnCareer.addEventListener('click', () => {
+    [...$secThemes].map((sec) => {
+      sec.classList.remove('on');
     });
-    career.classList.add('on');
+    $secCareer.classList.add('on');
   });
-  btnSkills.addEventListener('click', () => {
-    [...$themes].map((page) => {
-      page.classList.remove('on');
+  $btnSkills.addEventListener('click', () => {
+    [...$secThemes].map((sec) => {
+      sec.classList.remove('on');
     })
-    skills.classList.add('on');
+    $secSkills.classList.add('on');
   });
-  btnWorks.addEventListener('click', () => {
-    [...$themes].map((page) => {
-      page.classList.remove('on');
+  $btnWorks.addEventListener('click', () => {
+    [...$secThemes].map((sec) => {
+      sec.classList.remove('on');
     })
-    works.classList.add('on');
+    $secWorks.classList.add('on');
   });
 }
 navigation();

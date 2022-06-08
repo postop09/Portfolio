@@ -101,10 +101,10 @@ function secSkills() {
       } else if (e.target.name === 'figma') {
         $listTool.innerHTML = `
           <li class="item_point">
-            피그마를 통해 디자인 확인
+            디자인 확인과 지정된 디자인을 준수
           </li>
           <li class="item_point">
-            지정된 디자인을 준수
+            좋은 UI/UX 가 무엇일까 고민
           </li>
         `;
         skills.style.backgroundColor = '#a259ff31';
@@ -115,6 +115,7 @@ function secSkills() {
   })
 }
 secSkills();
+
 // 이미지 및 제목 변경
 function skillContents(bool, img, title) {
   const $secSkillInfo = skills.querySelector('.wrap_skillImg');

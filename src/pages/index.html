@@ -5,7 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>조윤식의 페이지</title>
-  <link rel="stylesheet" href="../styles/index.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
   <button type='button' class="btn_linkIntro">메인 화면으로 이동</button>
@@ -14,19 +15,13 @@
     <nav>
       <ul class="list_nav">
         <li class="btn_career">
-          <a href="#">
-            소개
-          </a>
+          <button type="button" class="btn_nav">소개</button>
         </li>
         <li class="btn_skills">
-          <a href="#">
-            기술
-          </a>
+          <button type="button" class="btn_nav">기술</button>
         </li>
         <li class="btn_works">
-          <a href="#">
-            작품
-          </a>
+          <button type="button" class="btn_nav">작품</button>
         </li>
       </ul>
     </nav>
@@ -42,7 +37,7 @@
         <span>식</span>
       </p>
       <div class="dot1"></div>
-      <div class="dot2"><img src="../images/img_me.jpg" alt="" class="img_me"></div>
+      <div class="dot2"><img src="../img/img_me.jpg" alt="" class="img_me"></div>
       <div class="dot3"></div>
       <div class="dot4"></div>
     </section>
@@ -100,261 +95,384 @@
     <!-- 기술 -->
     <section class="sec_theme sec_skills">
       <h3 class="txt_hide">기술</h3>
-      <strong class="txt_title">수행 능력 및 사용 기술</strong>
-      <div class="wrap_skillLevel">
-        <ul class="list_levels">
-          <li class="item_skill"><button type="button" class="btn_level btn_level5 on">HTML</button></li>
-          <li class="item_skill"><button type="button" class="btn_level btn_level4">CSS/SCSS</button></li>
-          <li class="item_skill"><button type="button" class="btn_level btn_level3">JavaScript</button></li>
-          <li class="item_skill"><button type="button" class="btn_level btn_level2">React.js</button></li>
-        </ul>
-        <ul class="list_skills">
-          <li class="txt_skill on">
-            <ul>
-              <li class="txt_detail">각 태그의 의미를 이해하고, 의미에 맞게 사용합니다.</li>
-              <li class="txt_detail">구역/구획, 보조기구 사용자들을 위한 코드 구조를 이해하고, 웹 접근성을 준수한 코드를 작성합니다.</li>
-              <li class="txt_detail">불필요한 'div' 태그를 사용하는 것을 지양합니다.</li>
-            </ul>
-          </li>
-          <li class="txt_skill">
-            <ul>
-              <li class="txt_detail">나만의 스타일 작성법을 정리하고, 체계적이고 일관된 코드를 위해 노력합니다.</li>
-              <li class="txt_detail">명확하고 이해가 가능한 class name을 작성하기위해 고민합니다.</li>
-              <li class="txt_detail">mixin, 변수를 활용하여 코드 단축과 유지보수를 위한 코드를 작성합니다.</li>
-            </ul>
-          </li>
-          <li class="txt_skill">
-            <ul>
-              <li class="txt_detail">async/await, fetch를 이용한 API 비동기 통신을 사용합니다.</li>
-              <li class="txt_detail">중복되는 변수를 방지하기 위해 함수형 코드 구조를 활용하고, 클린 코드를 위해 노력합니다.</li>
-              <li class="txt_detail"></li>
-            </ul>
-          </li>
-          <li class="txt_skill">
-            <ul>
-              <li class="txt_detail">useStatet의 상태 저장/관리, useEffect를 통한 마운트/언마운트/업데이트 시 작업 수행을 이해하고 사용합니다.</li>
-              <li class="txt_detail">props의 사용과 논리적인 단위의components 구성을 위해 고민합니다.</li>
-              <li class="txt_detail">의미에 맞게 태그를 사용하기 위해 노력합니다.</li>
-            </ul>
-          </li>
-        </ul>
+      <!-- swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="wrap_skill">
+              <article class="wrap_skillImg wrap_skillSet">
+                <img src="../img/icon_html.png" alt="HTML" class="img_skill">
+                <h4 class="txt_skillName">HTML</h4>
+                <p class="txt_subTitle">FRONTEND DEVELOPER SKILLS</p>
+              </article>		
+              <strong class="btn_view">활용 능력</strong>
+              <ul class="list_point">
+                <li class="item_point">
+                  Semantic Mark-up
+                </li>
+                <li class="item_point">
+                  웹 표준과 웹 접근성
+                </li>
+              </ul>
+              <ul class="list_skills">
+                <li class="item_skill">
+                  <button type="button" name="html" class="item_dot btn_skill btn_html"></button>
+                </li>
+                <li class="item_skill">
+                  <button type="button" name="css" class="item_dot btn_skill btn_css"></button>
+                </li>
+                <li class="item_skill">
+                  <button type="button" name="scss" class="item_dot btn_skill btn_scss"></button>
+                </li>
+                <li class="item_skill">
+                  <button type="button" name="js" class="item_dot btn_skill btn_js"></button>
+                </li>
+                <li class="item_skill">
+                  <button type="button" name="react" class="item_dot btn_skill btn_react"></button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="wrap_skill">
+              <article class="wrap_skillImg wrap_tool">
+                <img src="../img/icon_github.png" alt="github" class="img_skill">
+                <h4 class="txt_skillName">GITHUB</h4>
+                <p class="txt_subTitle">CO-WORKING TOOL</p>
+              </article>		
+              <strong class="btn_view btn_toolView">활용 능력</strong>
+              <ul class="list_point list_tool">
+                <li class="item_point">
+                  브랜치/이슈/칸반 프로젝트
+                </li>
+                <li class="item_point">
+                  기능/의미 단위의 커밋
+                </li>
+              </ul>
+              <ul class="list_skills">
+                <li class="item_skill">
+                  <button type="button" name="github" class="item_dot btn_tool btn_git"></button>
+                </li>
+                <li class="item_skill">
+                  <button type="button" name="figma" class="item_dot btn_tool btn_figma"></button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <!-- 작품 -->
     <section class="sec_theme sec_works">
       <h3 class="txt_hide">작품</h3>
-      <div class="wrap_btnWorks">
+      <div class="wrap_works">
         <strong class="txt_title">포트폴리오</strong>
-        <ul class="list_works">
-          <li class="item_work"><button type="button" class="btn_work btn_workTeam on">감귤마켓</button></li>
-          <li class="item_work"><button type="button" class="btn_work btn_momo">MOMO Project</button></li>
-          <li class="item_work"><button type="button" class="btn_work btn_workPortfolio">포트폴리오 연습</button></li>
-          <li class="item_work"><button type="button" class="btn_work btn_netflix">넷플릭스 클론</button></li>
+        <ul class="list_work">
+          <!-- 아이엠모모 -->
+          <li class="item_work">
+            <article class="sec_work">
+              <button type="button" name="momo" class="btn_imgWork"><img src="../img/img_momo.png" alt="감귤마켓 자세히 보기" class="img_work"></button>
+              <div class="wrap_workTxt">
+                <h4 class="txt_workTitle">I am MOMO</h4>
+                <small class="txt_company">I'm GROUND Team</small>
+                <small class="txt_period">2022.04 - 2022.04</small>
+                <strong class="txt_detail">본격 '일상 공감' 프로젝트입니다. '모모'라는 닉네임을 사용하며 가벼운 일상에서 부터 진솔한 감정까지 다양한 이야기로 서로의 삶을 공유하는 서비스입니다.</strong>
+                <small class="txt_workSkill">React, Styled-components, GitHub, REST API, netlify</small>
+                <ul class="list_btnMore">
+                  <li class="item_btnMore">
+                    <button type="button" name="momo" class="btn_viewMore">VIEW MORE</button>
+                  </li>
+                  <li class="item_btnMore">
+                    <a href="https://github.com/postop09/iammomoproject" target="_blank"><img src="../img/icon_github.png" alt="깃허브 페이지로 이동" class="img_icon"></a>
+                  </li>
+                  <li class="item_btnMore">
+                    <a href="https://iammomoproject.netlify.app/" target="_blank"><img src="../img/icon_internet.png" alt="실행 페이지로 이동" class="img_icon"></a>
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </li>
+          <!-- 넷플릭스 클론 -->
+          <li class="item_work">
+            <article class="sec_work">
+              <button type="button" name="netflix" class="btn_imgWork"><img src="../img/img_netflix.PNG" alt="감귤마켓 자세히 보기" class="img_work"></button>
+              <div class="wrap_workTxt">
+                <h4 class="txt_workTitle">넷플릭스 클론</h4>
+                <small class="txt_company">멋쟁이사자처럼(LIKELION)</small>
+                <small class="txt_period">2022.03 - 2022.04</small>
+                <strong class="txt_detail">넷플릭스 페이지 클론으로, 카테고리에 따른 영화 분류와 선택한 영화의 정보를 볼 수 있습니다.</strong>
+                <small class="txt_workSkill">React, HTML, SCSS, GitHub, OPEN API</small>
+                <ul class="list_btnMore">
+                  <li class="item_btnMore">
+                    <button type="button" name="netflix" class="btn_viewMore">VIEW MORE</button>
+                  </li>
+                  <li class="item_btnMore">
+                    <a href="https://github.com/postop09/react_netflix_clone" target="_blank"><img src="../img/icon_github.png" alt="깃허브 페이지로 이동" class="img_icon"></a>
+                  </li>
+                  <li class="item_btnMore">
+                    <a href="https://postop09.github.io/react_netflix_clone/" target="_blank"><img src="../img/icon_internet.png" alt="실행 페이지로 이동" class="img_icon"></a>
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </li>
+          <!-- 감귤마켓 -->
+          <li class="item_work">
+            <article class="sec_work">
+              <button type="button" name="mandarine" class="btn_imgWork"><img src="../img/img_mandarine.PNG" alt="감귤마켓 자세히 보기" class="img_work"></button>
+              <div class="wrap_workTxt">
+                <h4 class="txt_workTitle">감귤마켓</h4>
+                <small class="txt_company">멋쟁이사자처럼(LIKELION)</small>
+                <small class="txt_period">2022.02 - 2022.03</small>
+                <strong class="txt_detail">상품을 등록하여 홍보하고 일상을 공유할 수 있는 SNS입니다. 팀 개발 후 미작동 기능 및 UI/UX 개선을 위하여 개인 개발로 재구성했습니다.</strong>
+                <small class="txt_workSkill">Vanilla JS, HTML, SCSS, GitHub, REST API, Figma</small>
+                <ul class="list_btnMore">
+                  <li class="item_btnMore">
+                    <button type="button" name="mandarine" class="btn_viewMore">VIEW MORE</button>
+                  </li>
+                  <li class="item_btnMore">
+                    <a href="https://github.com/postop09/mandarine_market_ver2" target="_blank"><img src="../img/icon_github.png" alt="깃허브 페이지로 이동" class="img_icon"></a>
+                  </li>
+                  <li class="item_btnMore">
+                    <a href="https://postop09.github.io/mandarine_market_ver2/src/pages/index.html" target="_blank"><img src="../img/icon_internet.png" alt="실행 페이지로 이동" class="img_icon"></a>
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </li>
+          <!-- 포트폴리오 연습 -->
+          <li class="item_work">
+            <article class="sec_work">
+              <button type="button" name="portfolio" class="btn_imgWork"><img src="../img/img_portfolio.PNG" alt="감귤마켓 자세히 보기" class="img_work"></button>
+              <div class="wrap_workTxt">
+                <h4 class="txt_workTitle">포트폴리오 연습</h4>
+                <small class="txt_company">개인 프로젝트</small>
+                <small class="txt_period">2021.12 - 2022.01</small>
+                <strong class="txt_detail">개인 이력, 나를 정리하고 재미있게 소개하고 싶은 포트폴리오 연습 페이지입니다.</strong>
+                <small class="txt_workSkill">Vanilla JS, HTML, SCSS, GitHub, MindMap</small>
+                <ul class="list_btnMore">
+                  <li class="item_btnMore">
+                    <button type="button" name="portfolio" class="btn_viewMore">VIEW MORE</button>
+                  </li>
+                  <li class="item_btnMore">
+                    <a href="https://github.com/postop09/IntroduceYunsik" target="_blank"><img src="../img/icon_github.png" alt="깃허브 페이지로 이동" class="img_icon"></a>
+                  </li>
+                  <li class="item_btnMore">
+                    <a href="https://postop09.github.io/IntroduceYunsik/index.html" target="_blank"><img src="../img/icon_internet.png" alt="실행 페이지로 이동" class="img_icon"></a>
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </li>
         </ul>
       </div>
-      <!-- 감귤마켓 -->
-      <article class="artic_work artic_workTeam on">
-        <h4 class="txt_hide">감귤마켓</h4>
-        <a href="https://github.com/postop09/mandarine_market_ver2" target="_blank" class="txt_linkError"><img src="../images/img_mandarine.PNG" alt="감귤마켓 깃허브로 이동" class="img_work"></a>
-        <dl class="list_workDetail">
-          <div class="wrap_content wrap_summary">
-            <dt>작품 개요</dt>
-            <dd>
-              <ul>
-                <li><a href="https://github.com/postop09/mandarine_market_ver2" class="txt_git">1. GitHub로 이동하기</a></li>
-                <li>2. 모바일 우선 페이지 제작</li>
-                <li>3. 다양한 상품 판매, 구매, 교환, 채팅 등을 통해 소통 및 사용자 간 거래를 할 수 있다.</li>
-              </ul>
-            </dd>
-          </div>
-          <div class="wrap_content wrap_setting">
-            <dt>개발 환경</dt>
-            <dd>
-              <ul>
-                <li>1. From 5인 팀 개발 To 개인 개발</li>
-                <li>2. 주 2회 팀 회의 및 디스코드/카카오톡을 통한 지속적인 의사소통과 피드백</li>
-                <li>3. HTML/CSS/JavaScript</li>
-                <li>4. REST API</li>
-                <li>5. Git/GitHub 이슈/프로젝트 칸반</li>
-                <li>6. Figma</li>
-              </ul>
-            </dd>
-          </div>
-          <div class="wrap_content wrap_core">
-            <dt>주요 사항</dt>
-            <dd>
-              <ul class="list_contribute">
-                <li>
-                  <strong>1. 모든 페이지 제작</strong>
-                </li>
-                <li>
-                  <strong>2. 서버 API 연동</strong>
-                  <small>가. 로그인/회원가입</small>
-                  <small>나. 검색</small>
-                  <small>나. 게시글/댓글/프로필 CRUD</small>
-                </li>
-                <li>
-                  <strong>3. 작성자 구분 모달창</strong>
-                  <small>가. 본인의 글인 경우, 수정/삭제 모달창</small>
-                  <small>나. 타인의 글인 경우, 신고 모달창</small>
-                </li>
-              </ul>
-            </dd>
-          </div>
-        </dl>
-      </article>
-      <!-- 포트폴리오 연습 -->
-      <article class="artic_work artic_workPortfolio">
-        <h4 class="txt_hide">포트폴리오 연습</h4>
-        <a href="https://postop09.github.io/IntroduceYunsik/index.html" target="_blank" class="txt_link"><img src="../images/img_portfolio.PNG" alt="포트폴리오 연습 페이지로 이동" class="img_work"></a>
-        <dl class="list_workDetail">
-          <div class="wrap_content wrap_summary">
-            <dt>작품 개요</dt>
-            <dd>
-              <ul>
-                <li><a href="https://github.com/postop09/IntroduceYunsik" class="txt_git">1. GitHub로 이동하기</a></li>
-                <li>2. 모바일 우선 반응형 페이지 제작</li>
-                <li>3. 개인 이력, 나를 정리하고 재미있게 소개하고 싶은 포트폴리오 연습 페이지</li>
-              </ul>
-            </dd>
-          </div>
-          <div class="wrap_content wrap_setting">
-            <dt>개발 환경</dt>
-            <dd>
-              <ul>
-                <li>1. 개인 개발</li>
-                <li>2. HTML/CSS/JavaScript</li>
-                <li>3. Mindmap</li>
-              </ul>
-            </dd>
-          </div>
-          <div class="wrap_content wrap_core">
-            <dt>주요 사항</dt>
-            <dd>
-              <ul class="list_contribute">
-                <li>
-                  <strong>1. 메인 페이지</strong>
-                  <small>가. 다크모드</small>
-                  <small>나. 간략한 소개 및 이동링크 제시</small>
-                  <small>다. 카드 형태로 테마를 구분(카카오웹툰 참고)</small>
-                </li>
-                <li>
-                  <strong>2. 소개 페이지</strong>
-                  <small>가. 댓글 작성</small>
-                  <small>나. SNS 형태로 나의 가치관, 자격, 강점 등 소개</small>
-                </li>
-                <li>
-                  <strong>3. 웹 접근성을 고려한 페이지 제작</strong>
-                </li>
-                <li>
-                  <strong>4. 반응형 페이지 제작</strong>
-                </li>
-              </ul>
-            </dd>
-          </div>
-        </dl>
+    </section>
+    <!-- 모달창 -->
+    <section class="wrap_secModal">
+      <!-- 자세히 보기 모달창 -->
+      <!-- 아이엠모모 -->
+      <article class="sec_modalDetail">
+        <h3 class="txt_hide">자세히 보기 모달창</h3>
+        <div class="wrap_modalDetail">
+          <video src="../video/video_momo.mp4" class="video_detail" controls></video>
+          <section>
+            <h4 class="txt_title">I am <span class="color_momo">MOMO</span></h4>
+            <div>
+              <strong class="txt_subTitle">구현 설명</strong>
+              <dl>
+                <dt>1. 진행 요령</dt>
+                <dd>기획 4명, 프론트엔드 2명, 백엔드 2명</dd>
+                <dt>2. 핵심 기능</dt>
+                <dd>REST API, 회원가입/로그인/로그아웃, 게시글 CRUD</dd>
+                <dt>3. 프로젝트 내용</dt>
+                <dd>
+                  <ul>
+                    <li>- Discord, Google Meet을 통한 회의와 소통</li>
+                    <li>- 페이지 UI, 게시글 CRUD 개발 담당 <span>(회원가입/로그인/메뉴바 제외)</span></li>
+                    <li>- Swiper.js 사용으로 사용자에게 적절한 사용 경험 제공</li>
+                    <li>- 기획팀과 진행상황 보고와 피드백 요청을 통해 지속적인 소통 주도</li>
+                    <li>- DEMO 개발 후 4개의 프로젝트 팀 중 상호평가 1등</li>
+                  </ul>
+                </dd>
+              </dl>
+            </div>
+          </section>
+          <button type="button" class="btn_close"><img src="../img/icon_btn_close.png" alt="모달창 닫기" class="img_close"></button>
+        </div>
       </article>
       <!-- 넷플릭스 클론 -->
-      <article class="artic_work artic_netflix">
-        <h4 class="txt_hide">넷플릭스 클론</h4>
-        <a href="https://postop09.github.io/react_netflix_clone/" target="_blank" class="txt_link"><img src="../images/img_netflix.PNG" alt="넷플릭스 클론 페이지로 이동" class="img_work"></a>
-        <dl class="list_workDetail">
-          <div class="wrap_content wrap_summary">
-            <dt>작품 개요</dt>
-            <dd>
-              <ul>
-                <li><a href="https://github.com/postop09/react_netflix_clone" class="txt_git">1. GitHub로 이동하기</a></li>
-                <li>2. 기존 넷플릭스 페이지를 바탕으로 React를 활용하여 페이지 클론</li>
-              </ul>
-            </dd>
-          </div>
-          <div class="wrap_content wrap_setting">
-            <dt>개발 환경</dt>
-            <dd>
-              <ul>
-                <li>1. 개인 개발</li>
-                <li>2. React.js</li>
-                <li>3. react-router-dom/styled-components</li>
-                <li>4. swiper.js</li>
-              </ul>
-            </dd>
-          </div>
-          <div class="wrap_content wrap_core">
-            <dt>주요 사항</dt>
-            <dd>
-              <ul class="list_contribute">
-                <li>
-                  <strong>1. useState/useEffect를 이용한 상태 저장/관리</strong>
-                  <small>가. useState를 이용한 상태 저장/관리</small>
-                  <small>나. useEffect를 이용한 랜더링/페이지 업데이트</small>
-                </li>
-                <li>
-                  <strong>2. React.js 스타일</strong>
-                  <small>가. styled-components 와 css 복합적으로 사용/학습</small>
-                </li>
-                <li>
-                  <strong>3. React-router-dom을 통한 SPA, 도메인 설정과 이동</strong>
-                </li>
-              </ul>
-            </dd>
-          </div>
-        </dl>
+      <article class="sec_modalDetail">
+        <h3 class="txt_hide">자세히 보기 모달창</h3>
+        <div class="wrap_modalDetail">
+          <video src="../video/video_netflix.mp4" class="video_detail" controls></video>
+          <section>
+            <h4 class="txt_title"><span class="color_netflix">Netflix</span> 클론</h4>
+            <div>
+              <strong class="txt_subTitle">구현 설명</strong>
+              <dl>
+                <dt>1. 진행 요령</dt>
+                <dd>개인 개발</dd>
+                <dt>2. 핵심 기능</dt>
+                <dd>OPEN API(MOVIE API), 영화 목록/정보 출력, 영화 검색, 반응형</dd>
+                <dt>3. 프로젝트 내용</dt>
+                <dd>
+                  <ul>
+                    <li>- 리액트를 학습하며 진행한 개인 프로젝트</li>
+                    <li>- useState, useEffect에 대해 이해하고 적용</li>
+                    <li>- 검색 결과 및 영화 관련 정보 오류 시 대체 텍스트 제공으로 사용자 경험 개선</li>
+                    <li>- 상세히 보기 모달창 영역 외 클릭 시 닫기와 시각적 닫기 버튼 제공으로 사용성 개선</li>
+                  </ul>
+                </dd>
+              </dl>
+            </div>
+          </section>
+          <button type="button" class="btn_close"><img src="../img/icon_btn_close.png" alt="모달창 닫기" class="img_close"></button>
+        </div>
       </article>
-      <!-- 모모 프로젝트 -->
-      <article class="artic_work artic_momo">
-        <h4 class="txt_hide">모모 프로젝트</h4>
-        <a href="https://github.com/postop09/iammomoproject" target="_blank" class="txt_linkError"><img src="../images/img_momo.png" alt="모모 프로젝트 깃허브로 이동" class="img_work"></a>
-        <dl class="list_workDetail">
-          <div class="wrap_content wrap_summary">
-            <dt>작품 개요</dt>
-            <dd>
-              <ul>
-                <li><a href="https://github.com/postop09/iammomoproject" class="txt_git">1. GitHub로 이동하기</a></li>
-                <li>2. 가벼운 일상에서부터 진지하고 진솔한 감정까지, 글 전문 일상 공감’ 프로젝트</li>
-                <li>3. 모바일 우선 페이지</li>
-              </ul>
-            </dd>
+      <!-- 감귤마켓 -->
+      <article class="sec_modalDetail">
+        <h3 class="txt_hide">자세히 보기 모달창</h3>
+        <div class="wrap_modalDetail">
+          <video src="../video/video_mandarine.mp4" class="video_detail" controls></video>
+          <section>
+            <h4 class="txt_title"><span class="color_mandarine">🍊감귤마켓</span></h4>
+            <div>
+              <strong class="txt_subTitle">구현 설명</strong>
+              <dl>
+                <dt>1. 진행 요령</dt>
+                <dd>프론트엔드 4명, 학원 측 서버 API 제공</dd>
+                <dt>2. 핵심 기능</dt>
+                <dd>REST API, 회원가입/로그인/로그아웃, 게시글 CRUD 등 SNS 기반 기능(댓글, 좋아요, 프로필)</dd>
+                <dt>3. 프로젝트 내용</dt>
+                <dd>
+                  <ul>
+                    <li>- Discord를 통한 회의와 라이브 코드 리뷰</li>
+                    <li>- 팀 프로젝트 진행 당시 게시글 작성, 채팅UI 담당</li>
+                    <li>- 완료 후 개인 개발로 변경, 모든 기능 개인 개발</li>
+                    <li>- 오류 안내, 로딩 알림 등 UI/UX 관점의 사용감 개선</li>
+                    <li>- 검색창 Debounce 적용으로 검색 API호출 개선</li>
+                  </ul>
+                </dd>
+              </dl>
+            </div>
+          </section>
+          <button type="button" class="btn_close"><img src="../img/icon_btn_close.png" alt="모달창 닫기" class="img_close"></button>
+        </div>
+      </article>
+      <!-- 포트폴리오 연습 -->
+      <article class="sec_modalDetail">
+        <h3 class="txt_hide">자세히 보기 모달창</h3>
+        <div class="wrap_modalDetail">
+          <video src="../video/video_portfolio.mp4" class="video_detail" controls></video>
+          <section>
+            <h4 class="txt_title">포트폴리오 연습</h4>
+            <div>
+              <strong class="txt_subTitle">구현 설명</strong>
+              <dl>
+                <dt>1. 진행 요령</dt>
+                <dd>개인 개발</dd>
+                <dt>2. 핵심 기능</dt>
+                <dd>재미있는 표현을 위한 UI, 슬라이드, 다크모드, 반응형</dd>
+                <dt>3. 프로젝트 내용</dt>
+                <dd>
+                  <ul>
+                    <li>- 나를 재미있게 소개하고 싶은 개인 포트폴리오 페이지</li>
+                    <li>- 웹툰의 느낌과 SNS를 참고한 UI</li>
+                    <li>- 마우스 슬라이드 및 버튼 슬라이드 하드 코딩</li>
+                    <li>- 반응형/ 키보드 접근성을 고려한 마크업</li>
+                  </ul>
+                </dd>
+              </dl>
+            </div>
+          </section>
+          <button type="button" class="btn_close"><img src="../img/icon_btn_close.png" alt="모달창 닫기" class="img_close"></button>
+        </div>
+      </article>
+      <!-- 이미지 모달창 -->
+      <!-- 아이엠모모 -->
+      <article class="sec_modalImg">
+        <div class="wrap_modalImg">
+          <div class="swiper imgSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="../img/img_modal_momo1-min.png" alt="" class="img_modal"></div>
+              <div class="swiper-slide"><img src="../img/img_modal_momo2-min.png" alt="" class="img_modal"></div>
+              <div class="swiper-slide"><img src="../img/img_modal_momo3-min.png" alt="" class="img_modal"></div>
+            </div>
+            <button type="button" class="swiper-button-next"></button>
+            <button type="button" class="swiper-button-prev"></button>
+            <div class="swiper-pagination"></div>
+            <button type="button" class="btn_imgClose"><img src="../img/icon_btn_close.png" alt="모달창 닫기" class="img_imgClose"></button>
           </div>
-          <div class="wrap_content wrap_setting">
-            <dt>개발 환경</dt>
-            <dd>
-              <ul>
-                <li>1. '기획팀-프론트엔드-백엔드' 협업</li>
-                <li>2. React.js</li>
-                <li>3. axios/REST API</li>
-                <li>4. styled-component/react-router-dom</li>
-                <li>5. swiper.js</li>
-                <li>6. netlify</li>
-                <li></li>
-              </ul>
-            </dd>
+        </div>
+      </article>
+      <!-- 넷플릭스 클론 -->
+      <article class="sec_modalImg">
+        <div class="wrap_modalImg">
+          <div class="swiper imgSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="../img/img_modal_netflix1-min.png" alt="" class="img_modal"></div>
+              <div class="swiper-slide"><img src="../img/img_modal_netflix2-min.png" alt="" class="img_modal"></div>
+              <div class="swiper-slide"><img src="../img/img_modal_netflix3-min.png" alt="" class="img_modal"></div>
+            </div>
+            <button type="button" class="swiper-button-next"></button>
+            <button type="button" class="swiper-button-prev"></button>
+            <div class="swiper-pagination"></div>
+            <button type="button" class="btn_imgClose"><img src="../img/icon_btn_close.png" alt="모달창 닫기" class="img_imgClose"></button>
           </div>
-          <div class="wrap_content wrap_core">
-            <dt>주요 사항</dt>
-            <dd>
-              <ul class="list_contribute">
-                <li>
-                  <strong>1. 협업/협동</strong>
-                  <small>가. ‘기획팀-프론트’ 진행상황 공유와 지속적인 피드백 반영/확인</small>
-                  <small>나. ‘프론트-백’ 개발 간 API 호출 주소/변수명 컨벤션, 백엔드 개발자의 요청에 신속한 응답 등 적극적인 소통/개발</small>
-                </li>
-                <li>
-                  <strong>2. API 연동</strong>
-                  <small>가. 게시글 CRUD</small>
-                  <small>나. 질문 작성</small>
-                </li>
-                <li>
-                  <strong class="txt_block">3. 한계</strong>
-                  <small>가. 로그인/회원가입 인증 API 미구현</small>
-                  <small>나. 서버 폐쇄로 인해, API 호출 불가</small>
-                </li>
-              </ul>
-            </dd>
+        </div>
+      </article>
+      <!-- 감귤마켓 -->
+      <article class="sec_modalImg">
+        <div class="wrap_modalImg">
+          <div class="swiper imgSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="../img/img_modal_mandarine1-min.png" alt="" class="img_modal"></div>
+              <div class="swiper-slide"><img src="../img/img_modal_mandarine2-min.png" alt="" class="img_modal"></div>
+              <div class="swiper-slide"><img src="../img/img_modal_mandarine3-min.png" alt="" class="img_modal"></div>
+            </div>
+            <button type="button" class="swiper-button-next"></button>
+            <button type="button" class="swiper-button-prev"></button>
+            <div class="swiper-pagination"></div>
+            <button type="button" class="btn_imgClose"><img src="../img/icon_btn_close.png" alt="모달창 닫기" class="img_imgClose"></button>
           </div>
-        </dl>
+        </div>
+      </article>
+      <!-- 포트폴리오 연습 -->
+      <article class="sec_modalImg">
+        <div class="wrap_modalImg">
+          <div class="swiper imgSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="../img/img_modal_portfolio1-min.png" alt="" class="img_modal"></div>
+              <div class="swiper-slide"><img src="../img/img_modal_portfolio2-min.png" alt="" class="img_modal"></div>
+              <div class="swiper-slide"><img src="../img/img_modal_portfolio3-min.png" alt="" class="img_modal"></div>
+            </div>
+            <button type="button" class="swiper-button-next"></button>
+            <button type="button" class="swiper-button-prev"></button>
+            <div class="swiper-pagination"></div>
+            <button type="button" class="btn_imgClose"><img src="../img/icon_btn_close.png" alt="모달창 닫기" class="img_imgClose"></button>
+          </div>
+        </div>
       </article>
     </section>
   </main>
-  <script src="../JavaScript/index.js"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "cards",
+      grabCursor: true,
+    });
+    var swiper = new Swiper(".imgSwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+  </script>
+  <script src="../js/index.js"></script>
+  <script src="../js/skills.js"></script>
+  <script src="../js/works.js"></script>
 </body>
 </html>

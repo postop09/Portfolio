@@ -845,6 +845,9 @@ button {
   .sec_career .txt_title {
     margin-bottom: 30px;
   }
+  .sec_modalDetail .wrap_modalDetail .video_detail {
+    height: 300px;
+  }
 }
 
 @media screen and (max-width: 1180px) {

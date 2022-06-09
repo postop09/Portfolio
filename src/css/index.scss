@@ -599,6 +599,14 @@
 
   // 작품
   
+  // 자세히 보기 모달창
+  .sec_modalDetail {
+    .wrap_modalDetail {
+      .video_detail {
+        height: 300px;
+      }
+    }
+  }
 }
 @media screen and (max-width: 1180px) {
     // 표지

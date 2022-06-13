@@ -1,11 +1,11 @@
 // 기술
 function secSkills() {
-  const $btnSkill = skills.querySelectorAll('.btn_skill');
-  const $btnTool = skills.querySelectorAll('.btn_tool');
-  const $listPoint = skills.querySelector('.list_point');
-  const $listTool = skills.querySelector('.list_tool');
-  const $btnView = skills.querySelector('.btn_view');
-  const $btnToolView = skills.querySelector('.btn_toolView');
+  const $btnSkill = $secSkills.querySelectorAll('.btn_skill');
+  const $btnTool = $secSkills.querySelectorAll('.btn_tool');
+  const $listPoint = $secSkills.querySelector('.list_point');
+  const $listTool = $secSkills.querySelector('.list_tool');
+  const $btnView = $secSkills.querySelector('.btn_view');
+  const $btnToolView = $secSkills.querySelector('.btn_toolView');
 
   // FRONTEND SKILLS
   [...$btnSkill].map((btn) => {
@@ -24,7 +24,7 @@ function secSkills() {
             웹 표준과 웹 접근성
           </li>
         `;
-        skills.style.backgroundColor = '#fc470b31';
+        $secSkills.style.backgroundColor = '#fc470b31';
         $btnView.style.color = '#fff';
         $btnView.style.backgroundColor = '#fc490b';
       } else if (e.target.name === 'css') {
@@ -36,7 +36,7 @@ function secSkills() {
             명확한 Class name
           </li>
         `;
-        skills.style.backgroundColor = '#2196f331';
+        $secSkills.style.backgroundColor = '#2196f331';
         $btnView.style.color = '#fff';
         $btnView.style.backgroundColor = '#2196f3';
       } else if (e.target.name === 'scss') {
@@ -48,7 +48,7 @@ function secSkills() {
             변수와 mixin
           </li>
         `;
-        skills.style.backgroundColor = '#cc669931';
+        $secSkills.style.backgroundColor = '#cc669931';
         $btnView.style.color = '#fff';
         $btnView.style.backgroundColor = '#cc6699';
       } else if (e.target.name === 'js') {
@@ -60,7 +60,7 @@ function secSkills() {
             API 최적화와 에러 핸들링
           </li>
         `;
-        skills.style.backgroundColor = '#ffdf0031';
+        $secSkills.style.backgroundColor = '#ffdf0031';
         $btnView.style.color = 'black';
         $btnView.style.backgroundColor = '#ffdf00';
       } else if (e.target.name === 'react') {
@@ -72,7 +72,7 @@ function secSkills() {
             useState와 useEffect
           </li>
         `;
-        skills.style.backgroundColor = '#5ed3f331';
+        $secSkills.style.backgroundColor = '#5ed3f331';
         $btnView.style.color = 'black';
         $btnView.style.backgroundColor = '#5ed3f3';
       } 
@@ -95,7 +95,7 @@ function secSkills() {
             기능/의미 단위의 커밋
           </li>
         `;
-        skills.style.backgroundColor = '#00000031';
+        $secSkills.style.backgroundColor = '#00000031';
         $btnToolView.style.color = 'white';
         $btnToolView.style.backgroundColor = '#000000';
       } else if (e.target.name === 'figma') {
@@ -107,7 +107,7 @@ function secSkills() {
             좋은 UI/UX 가 무엇일까 고민
           </li>
         `;
-        skills.style.backgroundColor = '#a259ff31';
+        $secSkills.style.backgroundColor = '#a259ff31';
         $btnToolView.style.color = 'white';
         $btnToolView.style.backgroundColor = '#a259ff';
       }
@@ -118,8 +118,8 @@ secSkills();
 
 // 이미지 및 제목 변경
 function skillContents(bool, img, title) {
-  const $secSkillInfo = skills.querySelector('.wrap_skillImg');
-  const $secToolInfo = skills.querySelector('.wrap_tool');
+  const $secSkillInfo = $secSkills.querySelector('.wrap_skillImg');
+  const $secToolInfo = $secSkills.querySelector('.wrap_tool');
   const Uppertitle = title.toUpperCase();
   
   if (bool === true) {

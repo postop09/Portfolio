@@ -251,6 +251,7 @@ button {
   width: 100px;
   height: 100px;
   background-color: cornflowerblue;
+  opacity: 0;
   -webkit-animation: backgroundDot 3s forwards;
           animation: backgroundDot 3s forwards;
 }
@@ -410,7 +411,7 @@ button {
 
 .sec_skills .swiper {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);

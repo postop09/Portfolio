@@ -10,6 +10,7 @@
     transform: scale(300%);
   }
 }
+
 @keyframes opacity {
   0% {
     opacity: 0;
@@ -18,6 +19,7 @@
     opacity: 1;
   }
 }
+
 @keyframes career {
   0% {
     opacity: 0;
@@ -28,6 +30,7 @@
     transform: translateX(0);
   }
 }
+
 @keyframes skills {
   0% {
     opacity: 0;
@@ -38,6 +41,7 @@
     transform: translate(-50%, -50%);
   }
 }
+
 @keyframes mouseover {
   0% {
     transform: rotateZ(0deg);
@@ -67,6 +71,7 @@
   font-weight: 700;
   text-align: center;
   background-color: coral;
+
   &:focus {
     top: 0;
   }
@@ -79,18 +84,21 @@
   width: 100%;
   z-index: 100;
 }
+
 .list_nav {
   display: flex;
   justify-content: space-around;
   max-width: 640px;
   margin-left: auto;
   padding: 20px 0;
+
   .btn_nav {
     font-size: 36px;
     font-weight: 900;
     transition: all .25s;
     color: dimgray;
     background: none;
+
     &:hover {
       color: coral;
     }
@@ -101,11 +109,13 @@
 .sec_theme.on {
   display: flex;
 }
+
 .sec_intro {
   display: none;
   position: relative;
   height: 100vh;
   overflow: hidden;
+
   .txt_backName {
     margin: 50px 0 0 240px;
     font-size: 220px;
@@ -113,11 +123,13 @@
     opacity: 0;
     animation: opacity 3s forwards 2s;
     cursor: default;
+
     span {
       display: block;
       color: lightgray;
     }
   }
+
   .dot1 {
     position: absolute;
     top: 100px;
@@ -129,11 +141,13 @@
     opacity: 0;
     animation: backgroundDot 3s forwards;
   }
+
   .dot2 {
     position: absolute;
     top: 200px;
     right: 300px;
   }
+
   .dot3 {
     position: absolute;
     top: 500px;
@@ -145,6 +159,7 @@
     opacity: 0;
     animation: backgroundDot 4s forwards .7s;
   }
+
   .dot4 {
     position: absolute;
     top: 700px;
@@ -156,6 +171,7 @@
     opacity: 0;
     animation: backgroundDot 5s forwards .5s;
   }
+
   .img_me {
     object-fit: cover;
     object-position: center center;
@@ -177,6 +193,7 @@
   height: 100vh;
   margin: auto;
   overflow: hidden;
+
   .txt_title {
     display: block;
     font-size: 50px;
@@ -184,38 +201,48 @@
     opacity: 0;
     animation: career 2s forwards;
   }
+
   .artic_career {
     margin-bottom: 40px;
     opacity: 0;
+
     h4 {
       font-size: 32px;
       margin-bottom: 20px;
     }
+
     .wrap_content {
       display: flex;
       margin-bottom: 15px;
     }
+
     dt,
     dd {
       font-size: 24px;
       color: dimgray;
     }
+
     dt {
       font-weight: 700;
     }
+
     dd {
       margin-left: 7px;
     }
+
     .txt_detail {
       color: dimgray;
     }
   }
+
   .artic_front {
     animation: career 2s forwards .3s;
   }
+
   .artic_react {
     animation: career 2s forwards .6s;
   }
+
   .dot1 {
     position: absolute;
     top: 500px;
@@ -227,6 +254,7 @@
     opacity: 0;
     animation: backgroundDot 3s forwards;
   }
+
   .dot2 {
     position: absolute;
     top: 350px;
@@ -244,6 +272,7 @@
 .sec_skills.on {
   display: block;
 }
+
 .sec_skills {
   display: none;
   height: 100vh;
@@ -258,6 +287,7 @@
     width: 340px;
     animation: skills 1s forwards;
   }
+
   .swiper-slide {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     border-radius: 18px;
@@ -269,20 +299,24 @@
     padding: 30px;
     background-color: #fff;
     text-align: center;
+
     .img_skill {
       width: 200px;
       height: 200px;
       margin-bottom: 20px;
     }
+
     .txt_skillName {
       font-size: 24px;
       color: dimgray;
     }
+
     .txt_subTitle {
       margin-bottom: 10px;
       font-size: 14px;
       color: #bbb;
     }
+
     .btn_view {
       display: block;
       box-shadow: 5px 5px 10px #0000004d;
@@ -298,12 +332,15 @@
       background-color: #fc490b;
       transition: all .5s;
     }
+
     .btn_toolView {
       background-color: #000000;
     }
   }
+
   .list_point {
     margin-bottom: 25px;
+
     .item_point {
       border-bottom: 1px solid #eee;
       width: 100%;
@@ -311,48 +348,63 @@
       letter-spacing: 1px;
       color: dimgray;
     }
+
     .item_point:last-child {
       border-bottom: none;
     }
   }
+
   .list_skills {
     .item_skill {
       display: inline-block;
     }
+
     .item_dot {
       width: 30px;
       height: 30px;
       border-radius: 50%;
-      margin: 0px 10px;
+      margin: 0px 5px;
       opacity: 0.4;
       transition: all .5s;
     }
+
     .btn_html {
       box-shadow: 5px 5px 10px #fc470bad;
       background-color: #fc490b;
       opacity: 1;
     }
+
     .btn_css {
       box-shadow: 5px 5px 10px #2196f3ad;
       background-color: #2196f3;
     }
+
     .btn_scss {
       box-shadow: 5px 5px 10px #cc6699ad;
       background-color: #cc6699;
     }
+
     .btn_js {
       box-shadow: 5px 5px 10px #ffdf00ad;
       background-color: #ffdf00;
     }
+
     .btn_react {
       box-shadow: 5px 5px 10px #5ed3f3ad;
       background-color: #5ed3f3;
     }
+
+    .btn_ts {
+      box-shadow: 5px 5px 10px #3178c6ad;
+      background-color: #3178c6;
+    }
+
     .btn_git {
       box-shadow: 5px 5px 10px #000000ad;
       background-color: #000000;
       opacity: 1;
     }
+
     .btn_figma {
       box-shadow: 5px 5px 10px #a259ffad;
       background-color: #a259ff;
@@ -364,36 +416,44 @@
 .sec_works.on {
   display: block;
 }
+
 .sec_works {
   display: none;
   max-width: 1280px;
   margin: auto;
+
   .wrap_works {
     position: relative;
     width: 100%;
     padding: 170px 0 40px;
+
     .txt_title {
       display: block;
       margin-bottom: 100px;
       font-size: 50px;
       animation: career 1s forwards;
     }
+
     .item_work {
       margin-bottom: 80px;
+
       &:last-child {
         margin-bottom: 0;
       }
     }
   }
+
   .sec_work {
     display: flex;
     opacity: 0;
     animation: career 1s forwards .2s;
+
     .btn_imgWork {
       box-shadow: 0 0 5px #000000;
       border-radius: 10px;
       overflow: hidden;
     }
+
     .img_work {
       display: block;
       width: 250px;
@@ -401,29 +461,36 @@
       object-fit: cover;
       filter: grayscale(90%);
       transition: all .5s;
+
       &:hover {
         filter: grayscale(0%);
       }
     }
+
     .wrap_workTxt {
       display: flex;
       flex-direction: column;
       margin-left: 20px;
     }
+
     .txt_workTitle {
       font-size: 24px;
     }
+
     .txt_company {
       font-size: 16px;
       color: #696969;
     }
+
     .txt_period {
       color: #696969;
     }
+
     .txt_detail {
       max-width: 350px;
       font-weight: 400;
       word-break: keep-all;
+
       &::before {
         content: '';
         display: block;
@@ -433,36 +500,43 @@
         background-color: #696969;
       }
     }
+
     .txt_workSkill {
       margin-top: auto;
       font-size: 14px;
       color: #696969;
     }
+
     .list_btnMore {
       display: flex;
       margin-top: 10px;
       align-items: center;
     }
+
     .item_btnMore {
       margin-right: 15px;
     }
+
     .btn_viewMore {
       border-radius: 5px;
       padding: 10px;
       font-size: 14px;
       background-color: rgba(0, 0, 0, 0.5);
       transition: all .2s;
+
       &:hover {
         background-color: #000000;
         color: white;
       }
     }
+
     .img_icon {
       display: block;
       width: 25px;
       height: 25px;
       background-color: none;
       object-fit: contain;
+
       &:hover {
         animation: mouseover .8s;
       }
@@ -474,6 +548,7 @@
 .sec_modalDetail.on {
   display: block;
 }
+
 .sec_modalDetail {
   display: none;
   position: fixed;
@@ -484,40 +559,50 @@
   background-color: #ffffff;
   z-index: 100;
   animation: career .5s forwards;
+
   .wrap_modalDetail {
     width: 35vw;
     max-height: 90vh;
     padding: 30px 20px 20px;
     overflow-y: scroll;
+
     &::-webkit-scrollbar {
       display: none;
     }
+
     .video_detail {
       width: 100%;
       height: 40vh;
       background-color: #000000;
     }
+
     .txt_title {
       margin: 10px 0;
       font-size: 24px;
+
       .color_momo {
         color: #d9730d;
       }
+
       .color_netflix {
         color: #d91921;
       }
+
       .color_mandarine {
         color: #ea7f42;
       }
     }
+
     .txt_subTitle {
       display: block;
       font-size: 20px;
     }
+
     dt {
       margin-top: 5px;
       font-weight: 700;
     }
+
     .btn_close {
       position: absolute;
       top: 3px;
@@ -527,6 +612,7 @@
       background-color: transparent;
       transition: all .2s;
     }
+
     .img_close {
       display: block;
       width: 14px;
@@ -534,10 +620,12 @@
     }
   }
 }
+
 // 이미지 모달창
 .sec_modalImg.on {
   display: block;
 }
+
 .sec_modalImg {
   display: none;
   position: fixed;
@@ -547,6 +635,7 @@
   bottom: 0;
   background-color: #00000050;
   z-index: 200;
+
   .wrap_modalImg {
     .swiper {
       position: absolute;
@@ -558,6 +647,7 @@
       padding: 20px;
       background-color: transparent;
     }
+
     .swiper-slide {
       text-align: center;
       font-size: 18px;
@@ -568,15 +658,18 @@
       user-select: none;
       cursor: grab;
     }
+
     .img_modal {
       box-shadow: 0 0 10px #000000;
       max-width: 600px;
       max-height: 600px;
     }
+
     .swiper-pagination {
       bottom: 0px;
     }
   }
+
   .btn_imgClose {
     position: absolute;
     top: 20px;
@@ -584,6 +677,7 @@
     background-color: transparent;
     z-index: 100;
   }
+
   .img_imgClose {
     width: 25px;
     height: 25px;
@@ -607,7 +701,7 @@
   // 기술
 
   // 작품
-  
+
   // 자세히 보기 모달창
   .sec_modalDetail {
     .wrap_modalDetail {
@@ -617,23 +711,25 @@
     }
   }
 }
+
 @media screen and (max-width: 1180px) {
-    // 표지
-    .sec_intro {
-      .txt_backName {
-        font-size: 200px;
-        line-height: 250px;
-      }
+  // 표지
+  .sec_intro {
+    .txt_backName {
+      font-size: 200px;
+      line-height: 250px;
     }
-    // 소개
-    .sec_career {
-      max-width: 916px;
-      .txt_title {
-        margin-bottom: 30px;
-      }
+  }
+  // 소개
+  .sec_career {
+    max-width: 916px;
+
+    .txt_title {
+      margin-bottom: 30px;
     }
+  }
   // 기술
 
   // 작품
-  
+
 }

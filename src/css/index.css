@@ -176,6 +176,9 @@ button {
 .list_nav .btn_nav:hover {
   color: coral;
 }
+.list_nav .btn_selected {
+  color: coral;
+}
 
 .sec_theme.on {
   display: flex;

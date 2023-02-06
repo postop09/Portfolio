@@ -3,7 +3,7 @@ const $wrapSecModal = document.querySelector('.wrap_secModal');
 
 function detailModal() {
   const $secModal = $wrapSecModal.querySelectorAll('.sec_modalDetail');
-  const [$secMomo, $secNetflix, $secMandarine, $secPortfolio] = [...$secModal];
+  const [$secAllReborn, $secMomo, $secNetflix, $secMandarine, $secPortfolio] = [...$secModal];
   const $btnViewMore = document.querySelectorAll('.btn_viewMore');
   const $btnClose = $wrapSecModal.querySelectorAll('.btn_close');
   // 모달창 열고 닫기
@@ -14,7 +14,9 @@ function detailModal() {
       })
     })
     btn.addEventListener('click', () => {
-      if (btn.name === 'momo') {
+      if (btn.name === 'all_reborn') {
+        $secAllReborn.classList.add('on');
+      } else if (btn.name === 'momo') {
         $secMomo.classList.add('on');
       } else if (btn.name === 'netflix') {
         $secNetflix.classList.add('on');

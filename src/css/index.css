@@ -604,6 +604,12 @@ button {
   margin: 10px 0;
   font-size: 24px;
 }
+.sec_modalDetail .wrap_modalDetail .color_allReborn {
+  color: #4AA96C;
+}
+.sec_modalDetail .wrap_modalDetail .color_allReborn_red {
+  color: #F55C47;
+}
 .sec_modalDetail .wrap_modalDetail .txt_title .color_momo {
   color: #d9730d;
 }

@@ -116,6 +116,34 @@
     <div class="wrap_works">
       <strong class="txt_title">포트폴리오</strong>
       <ul class="list_work">
+        <!-- 롤챔 -->
+        <li class="item_work">
+          <article class="sec_work">
+            <button type="button" name="all_reborn" class="btn_imgWork"><img src="../img/img_lolchamp.png" alt="롤챔 자세히 보기"
+                                                                             class="img_work"></button>
+            <div class="wrap_workTxt">
+              <h4 class="txt_workTitle">롤챔</h4>
+              <small class="txt_company">개인 프로젝트</small>
+              <small class="txt_period">2023.04 - 2023.08</small>
+              <strong class="txt_detail">리그오브레전드 API 를 이용하여 소환사의 챔피언 숙련도 점수를 그래프로 보여줍니다. 자신과 다른 플레이어의 플레이 성향을 재미있게 확인할 수 있습니다.</strong>
+              <small class="txt_workSkill">NextJS, TypeScript, Styled-components, GitHub, AWS, D3, chartJS</small>
+              <ul class="list_btnMore">
+                <li class="item_btnMore">
+                  <button type="button" name="all_reborn" class="btn_viewMore">VIEW MORE</button>
+                </li>
+                <li class="item_btnMore">
+                  <a href="https://github.com/postop09/cancorplab" target="_blank"><img src="../img/icon_github.png"
+                                                                                        alt="깃허브 페이지로 이동"
+                                                                                        class="img_icon"></a>
+                </li>
+                <li class="item_btnMore">
+                  <a href="https://cancorplab.com/" target="_blank"><img src="../img/icon_internet.png"
+                                                                                    alt="실행 페이지로 이동" class="img_icon"></a>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </li>
         <!-- 올리본 -->
         <li class="item_work">
           <article class="sec_work">
@@ -261,6 +289,36 @@
   <!-- 모달창 -->
   <section class="wrap_secModal">
     <!-- 자세히 보기 모달창 -->
+    <!-- 롤챔 -->
+    <article class="sec_modalDetail">
+      <h3 class="txt_hide">자세히 보기 모달창</h3>
+      <div class="wrap_modalDetail">
+        <video src="../video/video_lolchamp.mp4" class="video_detail" controls></video>
+        <section>
+          <h4 class="txt_title">롤챔</h4>
+          <div class="wrap_txtDetail">
+            <strong class="txt_subTitle">구현 설명</strong>
+            <dl>
+              <dt>1. 진행 요령</dt>
+              <dd>개인 개발</dd>
+              <dt>2. 핵심 기능</dt>
+              <dd>D3, chartJS를 이용한 차트, Kakao 메시지 공유 API</dd>
+              <dt>3. 프로젝트 내용</dt>
+              <dd>
+                <ul>
+                  <li>- D3.js 및 chart.js 를 이용하여 소환사의 챔피언 숙련도 시각화</li>
+                  <li>- firebase Analitics 의 event 를 통해 사용자의 서비스 이용 동향 파악</li>
+                  <li>- AWS S3 - CloudFront - Route53 배포 프로세스 설정 경험</li>
+                  <li>- 메타태그 설정 및 카카오톡 메시지 공유 API 활용</li>
+                </ul>
+              </dd>
+            </dl>
+          </div>
+        </section>
+        <button type="button" class="btn_close"><img src="../img/icon_btn_close.png" alt="모달창 닫기" class="img_close">
+        </button>
+      </div>
+    </article>
     <!-- 올리본 -->
     <article class="sec_modalDetail">
       <h3 class="txt_hide">자세히 보기 모달창</h3>
@@ -414,6 +472,23 @@
       </div>
     </article>
     <!-- 이미지 모달창 -->
+    <!-- 롤챔 -->
+    <article class="sec_modalImg">
+      <div class="wrap_modalImg">
+        <div class="swiper imgSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="../img/img_modal_lolchamp1.png" alt="" class="img_modal"></div>
+            <div class="swiper-slide"><img src="../img/img_modal_lolchamp2.png" alt="" class="img_modal"></div>
+            <div class="swiper-slide"><img src="../img/img_modal_lolchamp3.png" alt="" class="img_modal"></div>
+          </div>
+          <button type="button" class="swiper-button-next"></button>
+          <button type="button" class="swiper-button-prev"></button>
+          <div class="swiper-pagination"></div>
+          <button type="button" class="btn_imgClose"><img src="../img/icon_btn_close.png" alt="모달창 닫기"
+                                                          class="img_imgClose"></button>
+        </div>
+      </div>
+    </article>
     <!-- 올리본 -->
     <article class="sec_modalImg">
       <div class="wrap_modalImg">
